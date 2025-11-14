@@ -21,13 +21,13 @@ class Run:
         self.run_folder = self.create_run_folder(experiment_folder)
         self.device = device
 
-    def run(self, vocabulary, prefixes):
+    def run(self, vocabulary, prefixes, alpha):
         rnn = LSTM(len(vocabulary), HIDDEN_DIMENSIONS)
         results = []
 
         # Baseline
         model = deepcopy(rnn).to(self.device)
-        train_accuracy, test_accuracy, train_losses, test_losses, nr_epochs = train(model, None, self.train_dataset, self.test_dataset, self.device)
+        train_accuracy, test_accuracy, train_losses, test_losses, nr_epochs = train(model, self.train_dataset, self.test_dataset, self.device)
         results.extend(self.test(model, prefixes, 'baseline', train_accuracy, test_accuracy, nr_epochs))
 
         torch.save(model.state_dict(), os.path.join(self.run_folder, 'models', 'rnn_Baseline.pt'))
@@ -36,7 +36,7 @@ class Run:
 
         # With BK
         model = deepcopy(rnn).to(self.device)
-        train_accuracy, test_accuracy, train_losses, test_losses, nr_epochs = train(model, self.tensor_dfa, self.train_dataset, self.test_dataset, self.device)
+        train_accuracy, test_accuracy, train_losses, test_losses, nr_epochs = train(model, self.train_dataset, self.test_dataset, self.device, self.tensor_dfa, alpha)
         results.extend(self.test(model, prefixes, 'with BK', train_accuracy, test_accuracy, nr_epochs))
 
         torch.save(model.state_dict(), os.path.join(self.run_folder, 'models', 'rnn_BK.pt'))

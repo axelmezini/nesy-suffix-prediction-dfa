@@ -1,4 +1,7 @@
+import os.path
 import re
+from collections import defaultdict
+from sympy import sympify, symbols
 import pydot
 import networkx as nx
 import torch
@@ -7,11 +10,12 @@ from torch import nn
 
 class SymbolicDFA:
     def __init__(self, file_path, labels):
-        self.file_path = file_path
+        self.totalize_dfa(file_path, labels)
+        self.file_path = os.path.join(file_path, 'simpleDFA_final.dot')
         self.graph = nx.MultiDiGraph()
         self.initial_state = None
         self.state_types = {}
-        self.label_to_idx = {label: i for i, label in enumerate(labels)}
+        self.label_to_idx = {label: i for i, label in enumerate(labels + ['end'])}
         self.transition_table = {}
         self.parse_dot()
 
@@ -65,8 +69,83 @@ class SymbolicDFA:
             else:
                 self.state_types[state] = 0
 
+    def totalize_dfa(self, dfa_path, labels):
+        with open(os.path.join(dfa_path, 'symbolicDFA.dot'), 'r') as file:
+            dot_string = file.read()
 
-class TensorDFA():
+        states = set()
+        initial_state = None
+        temp_accepting_states = set()
+        transitions = defaultdict(dict)
+
+        token_symbols = symbols(labels)
+        token_map = dict(zip(labels, token_symbols))
+
+        lines = dot_string.split('\n')
+
+        for line in lines:
+            if 'doublecircle' in line:
+                finals = line.strip().split(';')[1:-1]
+                temp_accepting_states.update(int(s.strip()) - 1 for s in finals)
+            elif '->' in line:
+                if 'init' in line:
+                    parts = line.strip().split(' ')
+                    initial_state = int(parts[2][:-1]) - 1
+                else:
+                    parts = line.strip().split(' ')
+                    src, dst = int(parts[0]) - 1, int(parts[2]) - 1
+                    label = line.strip().split('"')[1]
+                    states.add(src)
+                    states.add(dst)
+                    guard = sympify(a=label, locals=token_map)
+                    transitions[src][dst] = self.valid_tokens_for_guard(guard, labels)
+
+        final_rejecting = len(states)
+        final_accepting = len(states) + 1
+
+        for state in states:
+            if state in temp_accepting_states:
+                transitions[state][final_accepting] = ['end']
+            else:
+                transitions[state][final_rejecting] = ['end']
+
+        states.add(final_rejecting)
+        states.add(final_accepting)
+        transitions[final_rejecting][final_rejecting] = labels + ['end']
+        transitions[final_accepting][final_accepting] = labels + ['end']
+
+        final_dot = self.create_string(initial_state, final_accepting, transitions)
+        with open(os.path.join(dfa_path, 'simpleDFA_final.dot'), 'w+') as file:
+            file.write(final_dot)
+
+    def valid_tokens_for_guard(self, guard_expr, tokens):
+        valid = []
+        for token in tokens:
+            assignment = {t: False for t in tokens}
+            assignment[token] = True
+            if bool(guard_expr.subs(assignment)):
+                valid.append(token)
+        return valid
+
+    def create_string(self, initial_state, final_accepting, transitions):
+        intro = """digraph MONA_DFA {
+    rankdir = LR;
+    center = true;
+    size = "7.5,10.5";
+    edge [fontname = Courier];
+    node [height = .5, width = .5];
+    """
+        end = f'node [shape = doublecircle]; {final_accepting};'
+        start = f'node [shape = circle]; {initial_state};\ninit [shape = plaintext, label = ""];\ninit -> {initial_state};'
+        transitions_string = ""
+        for src, transitions in transitions.items():
+            for dst, edges in transitions.items():
+                for edge in edges:
+                    transitions_string += f'{src} -> {dst} [label="{edge}"];\n'
+        transitions_string += "}"
+        return intro + end + '\n' + start + '\n' + transitions_string
+
+class TensorDFA:
     def __init__(self, dfa, device):
         super().__init__()
         self.dfa = dfa

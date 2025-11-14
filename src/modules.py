@@ -21,9 +21,10 @@ class LSTM(nn.Module):
 
 
 class LogicLoss(nn.Module):
-    def __init__(self, dfa):
+    def __init__(self, dfa, alpha):
         super().__init__()
         self.dfa = dfa
+        self.alpha = alpha
 
     def forward(self, predictions, targets, inputs, device):
         probs = F.softmax(predictions, dim=-1)
@@ -43,8 +44,9 @@ class LogicLoss(nn.Module):
         ).view(batch_size, seq_len)
 
         gather_indices = targets.unsqueeze(-1)
-        valid_mask = self.dfa.state_types_tensor[next_states] != -1
-        ce_weights = torch.gather(valid_mask.float(), 2, gather_indices).squeeze(-1)
+        state_importance = (self.dfa.state_types_tensor[next_states] != -1).float()  # 1.0 for valid, 0.0 for invalid
+        soft_weights = torch.where(state_importance > 0, 1.0, 0.05)  # 0.05 for failure states
+        ce_weights = torch.gather(soft_weights, 2, gather_indices).squeeze(-1)
 
         weighted_ce_loss = (ce_loss_per_step * ce_weights).sum() / (ce_weights.sum() + 1e-6)
 
@@ -53,4 +55,4 @@ class LogicLoss(nn.Module):
         invalid_mass = (probs * reject_mask.float()).sum(dim=-1).mean()
         step_penalty = -torch.log(1.0 - invalid_mass + 1e-6)
 
-        return weighted_ce_loss * 0.25 + step_penalty * 0.75
+        return self.alpha * weighted_ce_loss + (1 - self.alpha) * step_penalty

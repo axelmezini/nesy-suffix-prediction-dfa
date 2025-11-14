@@ -5,12 +5,12 @@ import torchmetrics
 import torch.nn.functional as F
 from modules import LogicLoss
 
-MAX_NUM_EPOCHS = 2000
+MAX_NUM_EPOCHS = 2
 BATCH_SIZE = 64
 
 
 class EarlyStopping:
-    def __init__(self, patience=25, min_delta=1e-5, min_loss=0.01):
+    def __init__(self, patience=35, min_delta=1e-5, min_loss=0.01):
         self.patience = patience
         self.min_delta = min_delta
         self.min_loss = min_loss
@@ -27,10 +27,10 @@ class EarlyStopping:
         return self.counter >= self.patience or new_loss < self.min_loss
 
 
-def train(model, dfa, train_dataset, test_dataset, device):
+def train(model, train_dataset, test_dataset, device, dfa=None, alpha=None):
     loss_func = torch.nn.CrossEntropyLoss()
-    logic_loss = LogicLoss(dfa)
-    optim = torch.optim.Adam(params=model.parameters(), lr=0.001)
+    logic_loss = LogicLoss(dfa, alpha)
+    optim = torch.optim.Adam(params=model.parameters(), lr=0.0005)
     acc_func = torchmetrics.Accuracy(task='multiclass', num_classes=train_dataset.size(-1), top_k=1).to(device)
     early_stopper = EarlyStopping()
     train_losses, test_losses = [], []
@@ -49,7 +49,7 @@ def train(model, dfa, train_dataset, test_dataset, device):
         if epoch % 50 == 0:
             print(f"Epoch {epoch}:\ttrain loss: {train_loss:.4f}\ttest loss: {test_loss:.4f}\ttrain acc: {train_acc:.4f}\ttest acc: {test_acc:.4f}")
 
-        if epoch >= 100 and early_stopper(train_loss):
+        if epoch >= 500 and early_stopper(train_loss):
             return train_acc, test_acc, train_losses, test_losses, epoch
 
     return train_acc, test_acc, train_losses, test_losses, epoch
