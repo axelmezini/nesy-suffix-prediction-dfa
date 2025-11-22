@@ -157,6 +157,7 @@ class TensorDFA:
 
     def build_transition_tensor(self):
         table = torch.full((self.num_states, self.vocab_size), fill_value=-1, dtype=torch.long, device=self.device)
+        print(self.dfa.transition_table.items())
         for src, transitions in self.dfa.transition_table.items():
             for symbol_idx, dst in transitions.items():
                 table[src, symbol_idx] = dst

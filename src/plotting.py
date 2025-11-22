@@ -18,16 +18,16 @@ def plot_loss_over_epoch(values, title, folder):
 
 custom_palette = {
     'baseline | greedy': '#35c000',  # light green
-    'with BK | greedy': '#175300',  # dark green
+    'LLL | greedy': '#175300',  # dark green
     'baseline | temperature': '#ef0000',  # light red
-    'with BK | temperature': '#8b0000',  # dark red
+    'LLL | temperature': '#8b0000',  # dark red
 }
 
 model_order = [
     'baseline | greedy',
-    'with BK | greedy',
+    'LLL | greedy',
     'baseline | temperature',
-    'with BK | temperature',
+    'LLL | temperature',
 ]
 
 

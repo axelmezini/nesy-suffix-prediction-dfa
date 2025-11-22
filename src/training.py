@@ -5,12 +5,9 @@ import torchmetrics
 import torch.nn.functional as F
 from modules import LogicLoss
 
-MAX_NUM_EPOCHS = 2
-BATCH_SIZE = 64
-
 
 class EarlyStopping:
-    def __init__(self, patience=35, min_delta=1e-5, min_loss=0.01):
+    def __init__(self, patience, min_delta, min_loss):
         self.patience = patience
         self.min_delta = min_delta
         self.min_loss = min_loss
@@ -27,21 +24,23 @@ class EarlyStopping:
         return self.counter >= self.patience or new_loss < self.min_loss
 
 
-def train(model, train_dataset, test_dataset, device, dfa=None, alpha=None):
+def train(model, train_dataset, test_dataset, config, dfa=None, alpha=None):
     loss_func = torch.nn.CrossEntropyLoss()
     logic_loss = LogicLoss(dfa, alpha)
     optim = torch.optim.Adam(params=model.parameters(), lr=0.0005)
+    device = config['device']
     acc_func = torchmetrics.Accuracy(task='multiclass', num_classes=train_dataset.size(-1), top_k=1).to(device)
-    early_stopper = EarlyStopping()
+    early_stopper = EarlyStopping(config['patience'], config['min_delta'], config['min_loss'])
+
     train_losses, test_losses = [], []
 
     X_data = train_dataset[:, :-1, :]
     Y_data = train_dataset[:, 1:, :]
-    train_loader = DataLoader(TensorDataset(X_data, Y_data), batch_size=BATCH_SIZE, shuffle=False)
+    train_loader = DataLoader(TensorDataset(X_data, Y_data), batch_size=config['batch_size'], shuffle=False)
 
-    for epoch in range(MAX_NUM_EPOCHS):
+    for epoch in range(config['nr_epochs']):
         train_loss, train_acc = train_epoch(model, dfa, train_loader, acc_func, logic_loss, optim, device)
-        test_loss, test_acc = test(model, test_dataset, acc_func, loss_func, device)
+        test_loss, test_acc = test(model, test_dataset, acc_func, loss_func, device, config['batch_size'])
 
         train_losses.append(train_loss)
         test_losses.append(test_loss)
@@ -49,7 +48,7 @@ def train(model, train_dataset, test_dataset, device, dfa=None, alpha=None):
         if epoch % 50 == 0:
             print(f"Epoch {epoch}:\ttrain loss: {train_loss:.4f}\ttest loss: {test_loss:.4f}\ttrain acc: {train_acc:.4f}\ttest acc: {test_acc:.4f}")
 
-        if epoch >= 500 and early_stopper(train_loss):
+        if epoch >= config['min_epochs'] and early_stopper(train_loss):
             return train_acc, test_acc, train_losses, test_losses, epoch
 
     return train_acc, test_acc, train_losses, test_losses, epoch
@@ -83,7 +82,7 @@ def train_epoch(model, dfa, train_loader, acc_func, logic_loss, optim, device):
     return mean(batch_losses), mean(batch_accuracies)
 
 
-def test(model, test_dataset, acc_func, loss_func, device):
+def test(model, test_dataset, acc_func, loss_func, device, batch_size):
     model.eval()
     accuracies = []
     losses = []
@@ -91,7 +90,7 @@ def test(model, test_dataset, acc_func, loss_func, device):
     X_data = test_dataset[:, :-1, :]
     Y_data = test_dataset[:, 1:, :]
     test_tensor_dataset = TensorDataset(X_data, Y_data)
-    test_loader = DataLoader(test_tensor_dataset, batch_size=BATCH_SIZE, shuffle=False)
+    test_loader = DataLoader(test_tensor_dataset, batch_size=batch_size, shuffle=False)
 
     with torch.no_grad():
         for X, Y in test_loader:
