@@ -3,7 +3,7 @@ from torch.utils.data import TensorDataset, DataLoader
 import torch.nn
 import torchmetrics
 import torch.nn.functional as F
-from modules import LogicLoss
+from module.modules import LogicLoss
 
 
 class EarlyStopping:

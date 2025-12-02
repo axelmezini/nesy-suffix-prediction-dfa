@@ -45,7 +45,7 @@ class LogicLoss(nn.Module):
 
         gather_indices = targets.unsqueeze(-1)
         state_importance = (self.dfa.state_types_tensor[next_states] != -1).float()  # 1.0 for valid, 0.0 for invalid
-        soft_weights = torch.where(state_importance > 0, 1.0, 0.05)  # 0.05 for failure states
+        soft_weights = torch.where(state_importance > 0, 1.0, 0.001)  # 0.05 for failure states
         ce_weights = torch.gather(soft_weights, 2, gather_indices).squeeze(-1)
 
         weighted_ce_loss = (ce_loss_per_step * ce_weights).sum() / (ce_weights.sum() + 1e-6)

@@ -5,11 +5,11 @@ from copy import deepcopy
 import numpy as np
 import pandas as pd
 import torch
-from modules import LSTM
-from training import train
-from sampling import sample
+from module.modules import LSTM
+from pipeline.training import train
+from pipeline.sampling import sample
 from result import Result
-from plotting import plot_metrics_as_bars
+from pipeline.plotting import plot_metrics_as_bars
 #TODO: train_ds, test_ds, dfa in self? da vedere dopo aver aggiunto il noise; salavare tracce predette e plot loss
 
 

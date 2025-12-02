@@ -2,9 +2,9 @@ import os
 from datetime import datetime
 import yaml
 import torch
-from log import Log
-from model import Model
-from dfa import SymbolicDFA, TensorDFA
+from input.log import Log
+from input.model import Model
+from module.dfa import SymbolicDFA, TensorDFA
 from experiment import Experiment
 #TODO: da migliorare il passaggio declare -> ltl -> dfa; log noise injection da implementare
 
@@ -17,7 +17,7 @@ def main():
 
         dfa_folder_name = f'DFA_{config["template_type"]}_{config["template_support"]}/'
         dfa_folder = os.path.join(config['root_path'], 'datasets', dataset, 'model', dfa_folder_name)
-        if not os.path.isdir(dfa_folder):
+        if True: #not os.path.isdir(dfa_folder):
             os.makedirs(dfa_folder, exist_ok=True)
             declare_model = Model(config['root_path'], dataset, config["template_type"], config["template_support"])
             declare_model.to_ltl()
