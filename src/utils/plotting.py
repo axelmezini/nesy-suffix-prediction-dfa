@@ -30,7 +30,7 @@ model_order = [
     'LLL | temperature',
 ]
 
-
+#TODO: substitute with new plotting
 def plot_metrics_as_bars(data, metric_name, prefixes, path, errorbar=False):
     prefix_order = [
         f'train | {prefixes[0]}',

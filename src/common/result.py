@@ -1,4 +1,4 @@
-from pipeline.sampling import evaluate_similarity, evaluate_satisfiability
+from lll.sampling import evaluate_similarity, evaluate_satisfiability
 
 
 class Result:
