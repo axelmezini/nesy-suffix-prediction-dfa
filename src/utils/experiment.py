@@ -5,14 +5,12 @@ import numpy as np
 import pandas as pd
 import torch
 from common.architecture import LSTM
-from common.result import Result
+from common.training import train_new
+from common.sampling import sample
+from utils.result import Result
 from utils.plotting import plot_metrics_as_bars
 
-from lll.training import train_new
-from lll.sampling import sample
 
-from gll.training import train_old
-from gll.evaluation import suffix_prediction_with_temperature_with_stop, greedy_suffix_prediction_with_stop
 
 
 #TODO: train_ds, test_ds, dfa in self? da vedere dopo aver aggiunto il noise; salavare tracce predette e plot loss
@@ -52,8 +50,8 @@ class Experiment:
         if mode == 'baseline': #TODO: da generalizzare
             print('baseline started')
             train_acc, test_acc, _, _, nr_epochs = train_new(model, train_ds, test_ds, self.config, mode)
-        elif mode == 'gll_old':
-            train_acc, test_acc, _, _, _, nr_epochs = train_old(model, train_ds, test_ds, self.config.nr_epochs, self.alpha, deepdfa=tensor_dfa, prefixes=self.prefixes)
+        #elif mode == 'gll_old':
+        #    train_acc, test_acc, _, _, _, nr_epochs = train_old(model, train_ds, test_ds, self.config.nr_epochs, self.alpha, deepdfa=tensor_dfa, prefixes=self.prefixes)
         else:
             print(f'{mode} started')
             train_acc, test_acc, _, _, nr_epochs = train_new(model, train_ds, test_ds, self.config, mode, tensor_dfa, self.alpha, self.prefixes)
@@ -76,10 +74,10 @@ class Experiment:
                 }
             else:
                 predictions = {
-                    'train_temperature': suffix_prediction_with_temperature_with_stop(model, train_ds, prefix, temperature=self.config.temperature, stop_event=self._stop_event, g=g),
-                    'test_temperature': suffix_prediction_with_temperature_with_stop(model, test_ds, prefix, temperature=self.config.temperature, stop_event=self._stop_event, g=g),
-                    'train_greedy': greedy_suffix_prediction_with_stop(model, train_ds, prefix, stop_event=self._stop_event),
-                    'test_greedy': greedy_suffix_prediction_with_stop(model, test_ds, prefix, stop_event=self._stop_event)
+                    #'train_temperature': suffix_prediction_with_temperature_with_stop(model, train_ds, prefix, temperature=self.config.temperature, stop_event=self._stop_event, g=g),
+                    #'test_temperature': suffix_prediction_with_temperature_with_stop(model, test_ds, prefix, temperature=self.config.temperature, stop_event=self._stop_event, g=g),
+                    #'train_greedy': greedy_suffix_prediction_with_stop(model, train_ds, prefix, stop_event=self._stop_event),
+                    #'test_greedy': greedy_suffix_prediction_with_stop(model, test_ds, prefix, stop_event=self._stop_event)
                 }
             mode_result.add_predictions(prefix, predictions)
 

@@ -11,10 +11,10 @@ torch.set_deterministic_debug_mode("error")
 torch.set_printoptions(threshold=float('inf'))
 
 from utils.config import Config
+from utils.experiment import Experiment
 from common.event_log import Log
 from common.declare_model import Model
 from common.dfa import SymbolicDFA
-from common.experiment import Experiment
 
 
 #TODO: spostare Model, e symolic dfa check all'interno di symbolic dfa

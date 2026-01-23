@@ -3,7 +3,7 @@ from torch.utils.data import TensorDataset, DataLoader
 import torch.nn
 import torchmetrics
 import torch.nn.functional as F
-from lll.loss import LocalLogicLoss, GlobalLogicLoss
+from loss.local import LocalLogicLoss, GlobalLogicLoss
 
 
 class EarlyStopping:
