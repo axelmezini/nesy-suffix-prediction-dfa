@@ -1,4 +1,4 @@
-from lll.sampling import evaluate_similarity, evaluate_satisfiability
+from common.sampling import evaluate_similarity, evaluate_satisfiability
 
 
 class Result:

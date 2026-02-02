@@ -1,15 +1,16 @@
-root_path: /data/users/amezini/
-datasets: [sepsis]
+root_path: 'path_to_results'
+datasets: [sepsis, BPIC_2013_closed, BPIC_2020_travel]
 
 template_type: all
 template_support: 85-100
 
-noise_levels: ['01']#, '02', '03', '04']
+noise_levels: ['01', '02', '03', '04']
 portion: 1
 
-alpha_levels: [0.15, 0.35, 0.55]
+alpha_levels: [0.25, 0.75]
 
 modes: [baseline, GLL, LLL]
+architecture: Transformer
 nr_runs: 15
 hidden_dim: 100
 nr_epochs: 2000
