@@ -4,13 +4,11 @@ import random
 import numpy as np
 import pandas as pd
 import torch
-from common.architecture import LSTM
+from common.architecture import LSTM, Transformer
 from common.training import train_new
 from common.sampling import sample
 from utils.result import Result
 from utils.plotting import plot_metrics_as_bars
-
-
 
 
 #TODO: train_ds, test_ds, dfa in self? da vedere dopo aver aggiunto il noise; salavare tracce predette e plot loss
@@ -35,12 +33,17 @@ class Experiment:
 
             for mode in self.config.modes:
                 g = self.set_seed(run_nr)
-                model = LSTM(len(vocabulary), self.config.hidden_dim).to(self.config.device)
+                if self.config.architecture == 'LSTM':
+                    model = LSTM(len(vocabulary), self.config.hidden_dim).to(self.config.device)
+                else:
+                    model = Transformer(len(vocabulary), 128, 8, 2, 256, int(int(train_ds.size(1)) * 2 + 32)).to(self.config.device)
                 mode_results = self.run_mode(model, train_ds, test_ds, tensor_dfa, run_folder, run_nr, mode, g)
                 results.extend(mode_results)
 
-        self.results_df = pd.DataFrame(results)
-        self.results_df['dataset'] = self.ds_name
+            self.results_df = pd.DataFrame(results)
+            self.results_df['dataset'] = self.ds_name
+            output_path = os.path.join(self.experiment_folder, 'results.csv')
+            self.results_df.to_csv(output_path, index=False)
 
     def run_mode(self, model, train_ds, test_ds, tensor_dfa, run_folder, run_id, mode, g):
         #model = deepcopy(rnn).to(self.config['device'])
@@ -65,7 +68,7 @@ class Experiment:
 
     def test(self, model, train_ds, test_ds, tensor_dfa, mode_result, mode, g):
         for prefix in self.prefixes:
-            if mode == 'LLL' or mode == 'GLL':
+            if mode == 'LLL' or mode == 'GLL' or mode=='baseline':
                 predictions =  {
                     'train_temperature': sample(model, train_ds, prefix, self.config.device, self.config.temperature, g=g),
                     'test_temperature': sample(model, test_ds, prefix, self.config.device, self.config.temperature, g=g),
