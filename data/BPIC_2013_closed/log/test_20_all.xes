@@ -1,0 +1,4618 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file has been generated with the OpenXES library. It conforms -->
+<!-- to the XML serialization of the XES standard for log storage and -->
+<!-- management. -->
+<!-- XES standard version: 1.0 -->
+<!-- OpenXES library version: 1.0RC7 -->
+<!-- OpenXES is available from http://www.openxes.org/ -->
+<log xes.version="1.0" xes.features="nested-attributes" openxes.version="1.0RC7">
+	<string key="concept:name" value="Fulfilled traces extracted from: test_20.xes"/>
+	<trace>
+		<string key="concept:name" value="1-694420679"/>
+		<event>
+			<string key="org:resource" value="Kristina"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-07T15:24:22+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Kristina"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T16:36:11+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-694464235"/>
+		<event>
+			<string key="org:resource" value="Stefan"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-07T15:26:08+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Stefan"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T11:42:09+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-694509209"/>
+		<event>
+			<string key="org:resource" value="Adriano"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-07T17:06:16+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Adriano"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-15T13:51:54+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-694597155"/>
+		<event>
+			<string key="org:resource" value="Per-Erik"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-07T23:03:37+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Per-Erik"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-09T18:24:35+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Per-Erik"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T18:20:21+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Per-Erik"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T11:33:48+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Per-Erik"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T11:33:57+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-694808152"/>
+		<event>
+			<string key="org:resource" value="Ann-Charlotte"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-08T11:58:51+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ann-Charlotte"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-22T16:54:52+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-694923791"/>
+		<event>
+			<string key="org:resource" value="Christian"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-08T15:58:15+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christian"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-03T14:05:55+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-694899814"/>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-08T17:17:46+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T11:16:50+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T11:20:09+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-695241661"/>
+		<event>
+			<string key="org:resource" value="Gitt"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-09T09:30:37+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Gitt"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-03T12:22:25+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-695258011"/>
+		<event>
+			<string key="org:resource" value="Jolanta"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-09T10:34:54+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jolanta"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-12T14:24:43+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jolanta"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-12T15:09:24+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jolanta"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-06T12:02:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jolanta"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T16:02:57+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-695309312"/>
+		<event>
+			<string key="org:resource" value="Christophe"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-09T12:06:55+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christophe"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T17:46:18+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-695486321"/>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-09T16:17:58+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-09T18:27:40+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ruchi"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-09T18:30:07+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jonas"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-09T18:56:35+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sebastien"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-12T10:41:23+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sebastien"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T16:05:31+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-695616474"/>
+		<event>
+			<string key="org:resource" value="Suzanne"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-09T19:44:11+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Suzanne"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T12:59:01+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-695801720"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-12T01:15:03+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-12T01:16:23+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-695946177"/>
+		<event>
+			<string key="org:resource" value="Agneta"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-12T10:09:09+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Agneta"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-13T20:23:55+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-696057890"/>
+		<event>
+			<string key="org:resource" value="Steve"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-12T13:47:22+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Steve"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T16:06:39+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-696205828"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-12T14:59:51+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-12T15:01:20+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-696616111"/>
+		<event>
+			<string key="org:resource" value="Marc"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-13T10:23:05+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Marc"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-13T10:28:27+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-696714411"/>
+		<event>
+			<string key="org:resource" value="Malin"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-13T13:43:31+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Preeti"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-13T13:48:03+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Preeti"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-16T10:29:29+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Preeti"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T09:25:40+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-696835891"/>
+		<event>
+			<string key="org:resource" value="Inge"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-13T14:48:44+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Inge"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T14:04:30+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mohsin"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T14:07:01+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mohsin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T15:13:40+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mohsin"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T15:35:14+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-696695427"/>
+		<event>
+			<string key="org:resource" value="Mariusz"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-13T15:15:36+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mariusz"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-04T13:27:58+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-696881965"/>
+		<event>
+			<string key="org:resource" value="Agneta"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-13T15:36:42+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Agneta"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-30T15:42:37+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-696990621"/>
+		<event>
+			<string key="org:resource" value="Himmath"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-13T18:04:13+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Himmath"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-13T18:42:38+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-697249225"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T09:56:34+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T10:04:50+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-697366925"/>
+		<event>
+			<string key="org:resource" value="Samira"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T12:56:15+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Samira"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-23T17:52:14+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-697379551"/>
+		<event>
+			<string key="org:resource" value="Dweep"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T13:46:07+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Dweep"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-16T11:40:39+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-697459701"/>
+		<event>
+			<string key="org:resource" value="Peter"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T14:34:17+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Reinier"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T14:35:08+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Peter"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T14:54:02+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Reinier"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T14:54:03+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Reinier"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T15:21:23+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-697486903"/>
+		<event>
+			<string key="org:resource" value="Lauro"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T15:37:53+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lauro"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-04T21:13:57+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-697260307"/>
+		<event>
+			<string key="org:resource" value="Peter"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T15:59:11+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Peter"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-03T17:42:42+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Peter"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T13:32:22+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-697578650"/>
+		<event>
+			<string key="org:resource" value="Maria"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-14T17:04:35+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Maria"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-16T11:45:58+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-697811404"/>
+		<event>
+			<string key="org:resource" value="Agneta"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-15T11:15:22+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Agneta"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-15T11:34:49+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lars"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T15:37:19+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lars"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T15:38:51+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-697987547"/>
+		<event>
+			<string key="org:resource" value="Andreas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-15T15:04:08+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Andreas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T13:29:34+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anna"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T13:30:03+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Andreas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T13:30:24+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anna"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T13:31:16+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Andreas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T13:31:30+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Andreas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T13:32:00+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Andreas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T17:17:58+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-698057087"/>
+		<event>
+			<string key="org:resource" value="Manoj"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-15T16:52:30+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Manoj"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-15T16:55:20+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-698077265"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-15T18:34:01+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-15T18:37:07+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-698103331"/>
+		<event>
+			<string key="org:resource" value="Lars"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-15T21:21:59+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lars"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T17:28:54+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-698216063"/>
+		<event>
+			<string key="org:resource" value="Gitt"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-16T10:32:20+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Gitt"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-16T10:34:29+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Alexander"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T11:46:47+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Alexander"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-21T10:41:37+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Hilde"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-21T17:52:06+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Hilde"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-21T18:04:24+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-698481972"/>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-16T15:12:32+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T11:08:28+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-698524631"/>
+		<event>
+			<string key="org:resource" value="Kymaria"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-16T15:27:31+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Kymaria"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-23T19:42:08+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-698751834"/>
+		<event>
+			<string key="org:resource" value="Sreelesh"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-17T16:47:28+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sreelesh"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-17T17:33:29+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sreelesh"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T19:47:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sreelesh"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-26T13:56:05+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-698754281"/>
+		<event>
+			<string key="org:resource" value="Danish"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-17T22:25:20+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Danish"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-17T22:25:56+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Marek"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-17T23:49:16+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Marek"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T12:29:03+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-699010040"/>
+		<event>
+			<string key="org:resource" value="Christer"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-19T10:22:37+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christer"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T12:55:42+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-699140847"/>
+		<event>
+			<string key="org:resource" value="Sam"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-19T14:26:39+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sam"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-19T14:33:56+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-699345697"/>
+		<event>
+			<string key="org:resource" value="Matias"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-19T17:44:57+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Matias"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-22T12:26:33+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-699397256"/>
+		<event>
+			<string key="org:resource" value="Christofer"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-19T19:34:16+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christofer"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T18:13:37+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christofer"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T18:57:34+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-699370863"/>
+		<event>
+			<string key="org:resource" value="Adriano"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-19T20:39:17+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Adriano"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T20:26:13+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-699661601"/>
+		<event>
+			<string key="org:resource" value="Anders"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T11:54:40+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anders"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T13:09:12+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anders"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T13:22:15+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rafal"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T17:47:46+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Krzysztof"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-30T11:53:09+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mohsin"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-30T11:55:19+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mohsin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T12:11:03+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mohsin"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T12:12:02+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-699690829"/>
+		<event>
+			<string key="org:resource" value="Cyril"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T12:38:05+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Cyril"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T12:39:46+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Cyril"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T17:06:12+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Cyril"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T17:10:45+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-699737259"/>
+		<event>
+			<string key="org:resource" value="Nicky"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-20T14:02:25+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Nicky"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T16:47:27+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-700362905"/>
+		<event>
+			<string key="org:resource" value="Mikael"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-21T12:06:24+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mikael"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-23T18:21:13+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-700746442"/>
+		<event>
+			<string key="org:resource" value="Per-Erik"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-22T05:09:04+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Per-Erik"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-22T05:09:52+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Patrik"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-22T17:16:08+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Patrik"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-22T17:17:20+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-700896142"/>
+		<event>
+			<string key="org:resource" value="Marlene"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-22T10:24:45+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Marlene"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-26T12:00:17+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-701042928"/>
+		<event>
+			<string key="org:resource" value="Ulf"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-22T13:38:52+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ulf"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-15T15:58:11+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-701525462"/>
+		<event>
+			<string key="org:resource" value="Komaraiah"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-23T11:13:26+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Komaraiah"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-23T11:16:35+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-701555158"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-23T11:54:47+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-23T11:55:52+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-701990311"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-24T13:43:13+01:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-24T13:44:09+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702103380"/>
+		<event>
+			<string key="org:resource" value="Jon"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T06:39:33+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jon"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T06:45:45+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jon"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T06:45:53+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702103398"/>
+		<event>
+			<string key="org:resource" value="Jon"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T06:43:36+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jon"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T06:47:18+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702304430"/>
+		<event>
+			<string key="org:resource" value="Christer"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T11:57:30+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christer"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T18:34:19+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702304580"/>
+		<event>
+			<string key="org:resource" value="Santosh"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T14:03:07+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Santosh"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T15:54:38+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702378632"/>
+		<event>
+			<string key="org:resource" value="Santosh"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T14:06:58+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Santosh"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T15:53:42+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702482271"/>
+		<event>
+			<string key="org:resource" value="Shibly"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T16:18:02+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Shibly"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T16:19:01+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Shibly"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T16:20:05+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vesa"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T16:37:13+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Björn"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T16:55:07+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Björn"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T16:58:43+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702501021"/>
+		<event>
+			<string key="org:resource" value="Donna"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T16:39:23+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Donna"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T13:55:28+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Nancy"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T17:37:21+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Nancy"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T17:45:27+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702501138"/>
+		<event>
+			<string key="org:resource" value="Thiruvenkidam"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T17:05:13+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Thiruvenkidam"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T13:57:28+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Fredrik"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T13:57:57+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Thiruvenkidam"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T13:58:07+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Joanne"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T22:28:22+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Joanne"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T22:39:40+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702501532"/>
+		<event>
+			<string key="org:resource" value="Raul"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T17:42:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Raul"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T14:01:33+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Raul"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T17:21:38+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Raul"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T16:15:38+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702514881"/>
+		<event>
+			<string key="org:resource" value="Stefan"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T17:45:05+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Stefan"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T16:34:49+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Stefan"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T16:36:17+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702656292"/>
+		<event>
+			<string key="org:resource" value="Hans"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T20:22:17+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Hans"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T17:39:06+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-702673026"/>
+		<event>
+			<string key="org:resource" value="Raul"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-26T20:39:42+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Raul"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T14:07:40+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Raul"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T17:22:19+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Raul"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T16:24:42+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-703190797"/>
+		<event>
+			<string key="org:resource" value="Amit"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T15:16:57+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sreelesh"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T18:34:35+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mikael"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T18:53:26+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Peter"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T11:59:32+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jonas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T12:02:18+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vinodhkumar"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T12:02:48+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jörgen"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T13:46:21+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Nicolas"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T13:48:41+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Nicolas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T15:04:52+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Nicolas"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T15:05:15+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Joakim"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T18:25:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Joakim"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T18:43:51+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-703383433"/>
+		<event>
+			<string key="org:resource" value="Britt"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T18:03:01+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Britt"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-11T00:03:08+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Britt"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-11T00:04:17+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-703399394"/>
+		<event>
+			<string key="org:resource" value="John"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T18:12:29+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="John"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T18:18:11+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="John"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T17:14:49+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="John"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T17:14:54+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-703242211"/>
+		<event>
+			<string key="org:resource" value="Akanksha"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T21:50:15+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jerome"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T14:17:30+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jerome"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T14:18:50+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-703540157"/>
+		<event>
+			<string key="org:resource" value="-"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T22:05:42+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="-"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T22:14:23+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Srinivasan"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-27T22:23:26+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rijin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-30T14:09:42+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="-"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T12:35:35+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Srinivasa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T12:46:05+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Srinivasa"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T11:53:24+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Praveen"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T08:09:41+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Umar Farooque"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T08:30:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="-"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T08:51:24+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="-"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T15:16:46+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Srinivasan"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T16:39:11+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rijin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-10T05:32:47+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rijin"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-10T05:33:05+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Srinivasa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-10T08:56:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Srinivasan"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-10T09:22:45+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rijin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T01:58:03+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rijin"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-25T19:36:31+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-703964203"/>
+		<event>
+			<string key="org:resource" value="Deepa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T13:16:38+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Deepa"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T14:33:13+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Deepa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T21:05:38+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Deepa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T21:07:51+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-703964563"/>
+		<event>
+			<string key="org:resource" value="Lena"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T13:40:06+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lena"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T14:35:25+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lena"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-25T13:50:29+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lena"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-25T13:58:50+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-704226142"/>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T18:54:20+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-08T22:36:26+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-704229584"/>
+		<event>
+			<string key="org:resource" value="Jörgen"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T19:06:47+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jörgen"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T10:56:41+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-704229602"/>
+		<event>
+			<string key="org:resource" value="Alain"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-28T19:16:05+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Alain"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T16:33:58+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Alain"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T16:34:45+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-704725301"/>
+		<event>
+			<string key="org:resource" value="Sandrine"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T12:26:12+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sandrine"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T12:39:26+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-704977245"/>
+		<event>
+			<string key="org:resource" value="Praveen"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T18:39:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Praveen"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T18:49:03+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Martin"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-29T19:05:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jonas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T19:43:27+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Martin"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T19:57:01+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Fabien"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T10:58:36+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Fabien"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T10:59:06+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-705821921"/>
+		<event>
+			<string key="org:resource" value="Marlene"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-30T13:48:22+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Marlene"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-30T13:49:09+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-705847575"/>
+		<event>
+			<string key="org:resource" value="Pascal"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-30T16:30:47+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Pascal"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-30T16:37:12+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-706083257"/>
+		<event>
+			<string key="org:resource" value="Lukasz"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-03-30T19:07:24+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lukasz"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-29T16:08:24+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-706949124"/>
+		<event>
+			<string key="org:resource" value="Hari"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T12:23:23+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Hari"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-21T18:44:28+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-706915611"/>
+		<event>
+			<string key="org:resource" value="Sebastien"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T12:42:20+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sebastien"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T12:06:59+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-706959641"/>
+		<event>
+			<string key="org:resource" value="Tomasz"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T13:07:49+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomasz"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T20:37:42+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomasz"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T20:38:37+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-706866666"/>
+		<event>
+			<string key="org:resource" value="Ann-Charlotte"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T13:41:55+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ann-Charlotte"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T12:26:26+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-707025161"/>
+		<event>
+			<string key="org:resource" value="Marijn"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T13:50:09+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Marijn"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-06T17:10:37+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Marijn"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-06T17:11:52+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-706963013"/>
+		<event>
+			<string key="org:resource" value="Hilde"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T14:25:21+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Hilde"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T16:27:42+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Hilde"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T20:34:42+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-706982877"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T16:36:58+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-16T15:31:18+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-707053152"/>
+		<event>
+			<string key="org:resource" value="Lisbeth"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T17:07:23+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lisbeth"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T11:18:00+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-706988783"/>
+		<event>
+			<string key="org:resource" value="Håkan"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-02T17:07:28+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Håkan"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T15:51:26+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-707293328"/>
+		<event>
+			<string key="org:resource" value="Patrik"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-03T01:34:44+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Patrik"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-02T17:23:07+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-707693471"/>
+		<event>
+			<string key="org:resource" value="Aneesh V"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-03T14:14:09+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Aneesh V"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-09T23:28:59+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-707704098"/>
+		<event>
+			<string key="org:resource" value="Rickard"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-03T14:24:46+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rickard"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-04T15:46:53+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-707708844"/>
+		<event>
+			<string key="org:resource" value="Ala"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-03T15:25:45+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ala"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T15:03:49+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-707778891"/>
+		<event>
+			<string key="org:resource" value="Mattias"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-03T16:59:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mattias"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-12T15:33:01+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-708121948"/>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-03T23:27:16+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-03T23:29:12+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sarath"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T12:39:47+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sarath"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T14:20:10+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-708581207"/>
+		<event>
+			<string key="org:resource" value="Danny"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-04T12:19:31+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Danny"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-06T12:03:36+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-708582598"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-04T13:37:27+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-04T13:38:40+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-708716045"/>
+		<event>
+			<string key="org:resource" value="Rickard"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-04T15:02:46+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rickard"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-18T11:08:02+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-708833963"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-04T17:05:21+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-04T18:33:41+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-709461909"/>
+		<event>
+			<string key="org:resource" value="Thomas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-05T11:04:46+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Thomas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-24T13:17:19+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-709437431"/>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-05T11:25:57+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-08T22:33:23+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-709479221"/>
+		<event>
+			<string key="org:resource" value="Chew Khong"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-05T12:24:58+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Chew Khong"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-05T14:24:21+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-709802751"/>
+		<event>
+			<string key="org:resource" value="Hari"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-05T22:35:18+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Donald"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-09T19:58:40+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Donald"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-09T19:59:29+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-709802861"/>
+		<event>
+			<string key="org:resource" value="Christofer"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-05T22:53:25+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christofer"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-05T22:53:26+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christofer"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T18:07:10+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christofer"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T18:12:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christofer"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T18:36:44+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-710065204"/>
+		<event>
+			<string key="org:resource" value="Allan"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-06T09:39:22+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Allan"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-06T09:42:16+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-710109531"/>
+		<event>
+			<string key="org:resource" value="Anna"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-06T14:11:21+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anna"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-06T16:26:37+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-710269195"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-07T03:24:46+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-07T03:38:14+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-712814266"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-09T00:25:23+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-09T00:26:15+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-712856449"/>
+		<event>
+			<string key="org:resource" value="Inger"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-09T10:37:33+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Inger"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-09T10:39:47+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Amar"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-09T11:02:57+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Amar"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-16T13:59:43+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-712972277"/>
+		<event>
+			<string key="org:resource" value="Donald"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-09T20:18:44+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Donald"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-09T20:22:22+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-713106267"/>
+		<event>
+			<string key="org:resource" value="Thiago"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T04:03:09+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Thiago"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T01:33:02+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Thiago"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T01:46:34+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-715479377"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T12:30:09+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T12:31:00+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-715638561"/>
+		<event>
+			<string key="org:resource" value="Martin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T15:37:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Martin"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T15:44:34+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Pascal"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T16:09:18+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Pascal"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T16:41:51+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-715674227"/>
+		<event>
+			<string key="org:resource" value="Dieter"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T16:32:50+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Dieter"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-11T13:03:56+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-715703591"/>
+		<event>
+			<string key="org:resource" value="Mariusz"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T17:00:58+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mariusz"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T12:28:58+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-715860062"/>
+		<event>
+			<string key="org:resource" value="Gunilla"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T19:46:49+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Gunilla"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-10T19:54:09+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ola"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T12:36:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ola"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-19T12:02:37+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-716154984"/>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T10:38:08+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tarun"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-11T10:40:27+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tarun"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T11:07:44+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-717222893"/>
+		<event>
+			<string key="org:resource" value="Gitt"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-12T17:35:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Gitt"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-12T17:40:06+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Alexander"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T18:10:52+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Alexander"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T18:13:44+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-717275094"/>
+		<event>
+			<string key="org:resource" value="Gitt"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-12T18:12:45+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Gitt"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-12T18:17:17+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Alexander"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T18:11:01+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Alexander"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T18:15:05+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-717838591"/>
+		<event>
+			<string key="org:resource" value="Mariusz"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T14:19:48+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Mariusz"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-31T13:10:27+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-717801169"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T14:30:07+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T14:32:34+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-717713590"/>
+		<event>
+			<string key="org:resource" value="Anders"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T16:02:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anders"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-21T14:37:20+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anders"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-21T14:37:30+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-718031374"/>
+		<event>
+			<string key="org:resource" value="James"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T18:09:26+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="James"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T17:36:45+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="James"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T17:36:59+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-717852570"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T18:11:31+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T18:12:14+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-718132104"/>
+		<event>
+			<string key="org:resource" value="Murali"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-13T19:58:57+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Murali"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-19T14:58:02+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-718958603"/>
+		<event>
+			<string key="org:resource" value="Florent"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-16T14:15:04+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Florent"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-16T14:17:25+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-719210927"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-16T16:39:03+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-16T16:47:43+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-719517578"/>
+		<event>
+			<string key="org:resource" value="James"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-16T23:37:39+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="James"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T17:30:27+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-719999163"/>
+		<event>
+			<string key="org:resource" value="Murali"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-17T09:46:35+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Murali"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T07:48:11+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-720000146"/>
+		<event>
+			<string key="org:resource" value="Charlotte"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-17T11:01:12+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Charlotte"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-17T11:03:17+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Charlotte"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T17:44:11+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Charlotte"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T17:49:11+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-720041655"/>
+		<event>
+			<string key="org:resource" value="Johan"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-17T11:51:27+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Johan"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-17T12:38:11+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-720110557"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-17T13:19:39+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-17T13:25:37+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-720457477"/>
+		<event>
+			<string key="org:resource" value="Daniel"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-17T19:06:27+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Daniel"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T17:39:52+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-722041657"/>
+		<event>
+			<string key="org:resource" value="Venkanna"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-18T12:19:44+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Venkanna"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-23T12:52:52+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-722098557"/>
+		<event>
+			<string key="org:resource" value="Karin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-18T12:38:50+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Karin"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-04T15:01:00+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-722201158"/>
+		<event>
+			<string key="org:resource" value="Andreas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-18T14:16:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Andreas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T16:31:30+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-722334217"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-18T16:18:03+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-18T16:24:14+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-722334434"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-18T16:25:44+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-18T16:26:55+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-722688743"/>
+		<event>
+			<string key="org:resource" value="Anson"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-19T07:54:27+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anson"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-19T09:58:07+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anson"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-24T07:31:28+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anson"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-24T07:31:54+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-726808501"/>
+		<event>
+			<string key="org:resource" value="Miroslaw"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-19T16:31:06+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Miroslaw"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T18:56:52+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-728649379"/>
+		<event>
+			<string key="org:resource" value="Jörgen"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-20T19:32:44+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jörgen"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-20T19:47:59+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-728641711"/>
+		<event>
+			<string key="org:resource" value="Stephen"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-20T20:13:58+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Stephen"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-20T20:26:35+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Stephen"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-23T22:26:56+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Stephen"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T16:51:02+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-729440922"/>
+		<event>
+			<string key="org:resource" value="Shin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-23T11:29:47+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Shin"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T13:20:11+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-729423803"/>
+		<event>
+			<string key="org:resource" value="Klas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-23T12:11:42+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Klas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-24T15:24:32+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-729711756"/>
+		<event>
+			<string key="org:resource" value="Maria"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-23T17:24:45+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Maria"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T19:27:57+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-729635576"/>
+		<event>
+			<string key="org:resource" value="Pai"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-23T18:04:18+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Pai"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-18T14:11:18+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-729826369"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-23T18:56:04+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-23T18:59:57+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-729966151"/>
+		<event>
+			<string key="org:resource" value="Kåre"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-23T20:15:33+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Kåre"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T17:46:11+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-730084841"/>
+		<event>
+			<string key="org:resource" value="Vesa"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T02:48:09+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Himanshu"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T03:08:35+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Himanshu"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T03:09:14+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-730084875"/>
+		<event>
+			<string key="org:resource" value="Vesa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T03:05:25+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vesa"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T03:06:50+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Björn"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T12:15:22+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Björn"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-02T19:23:13+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-730644447"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T13:49:59+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T13:55:03+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-730961258"/>
+		<event>
+			<string key="org:resource" value="Jörgen"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-24T17:46:35+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jörgen"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T10:38:40+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-731792664"/>
+		<event>
+			<string key="org:resource" value="Bikshamaiah"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T12:34:38+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Bikshamaiah"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T13:24:33+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-731908702"/>
+		<event>
+			<string key="org:resource" value="Bikshamaiah"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T12:50:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Bikshamaiah"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T13:23:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Bikshamaiah"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T14:29:39+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-732357301"/>
+		<event>
+			<string key="org:resource" value="Rohit"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T20:18:15+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rohit"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-25T20:59:52+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rohit"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T15:05:13+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rohit"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T16:27:02+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-733169018"/>
+		<event>
+			<string key="org:resource" value="Michal"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-26T15:19:24+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Michal"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T15:16:48+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-733336456"/>
+		<event>
+			<string key="org:resource" value="Dweep"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-26T17:59:06+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Dweep"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T11:19:47+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Dweep"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T14:56:40+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-733451291"/>
+		<event>
+			<string key="org:resource" value="Edward"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-26T20:37:17+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Edward"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-26T20:39:25+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-733649220"/>
+		<event>
+			<string key="org:resource" value="Prasad"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T08:41:52+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Prasad"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T08:45:17+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Varun"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T10:33:50+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Varun"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T15:44:06+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-733562890"/>
+		<event>
+			<string key="org:resource" value="Srinivasan"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T12:01:45+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rijin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T13:08:12+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T17:24:09+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Kenneth"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T18:09:45+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Kenneth"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T17:03:01+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T16:55:27+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T16:56:10+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-734921423"/>
+		<event>
+			<string key="org:resource" value="Bjarne"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T16:34:05+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Bjarne"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T17:02:28+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-734831769"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T16:51:08+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-27T17:05:37+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-735265367"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-28T05:18:10+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-28T05:20:33+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-735265425"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-28T05:45:24+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-28T05:48:03+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-736351127"/>
+		<event>
+			<string key="org:resource" value="Praveen"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T07:27:00+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Praveen"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T07:31:22+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Abhinav"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T08:13:44+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Martin"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T08:15:21+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Martin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T12:34:04+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T12:34:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tarun"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T12:36:34+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jonas"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T14:33:07+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Joakim"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T15:11:40+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T15:14:50+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anurag"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T15:22:56+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tarun"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T16:01:53+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tarun"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T17:40:13+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-736351222"/>
+		<event>
+			<string key="org:resource" value="Praveen"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T07:47:41+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Praveen"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T07:55:51+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Abhinav"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T08:10:57+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Martin"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T08:13:34+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Martin"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T12:30:38+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T12:31:32+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tarun"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T12:36:03+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jonas"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T14:35:33+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Joakim"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T15:16:01+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T15:16:46+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anurag"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T15:19:43+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tarun"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T16:01:26+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tarun"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T17:40:44+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-736392818"/>
+		<event>
+			<string key="org:resource" value="Sivakumar"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T12:27:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sivakumar"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-28T12:20:49+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-736474918"/>
+		<event>
+			<string key="org:resource" value="Jenny"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T15:22:33+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jenny"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-04-30T15:27:28+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-737341073"/>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-01T16:55:13+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ruchi"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-01T16:59:48+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jonas"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-01T22:45:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Stefan"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-02T13:10:57+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Stefan"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-02T13:13:08+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-738626601"/>
+		<event>
+			<string key="org:resource" value="Peter"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-02T19:57:16+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Raphael"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-02T19:57:39+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Celine"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-02T20:04:21+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Celine"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-25T20:42:22+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-739307829"/>
+		<event>
+			<string key="org:resource" value="Lisbeth"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T16:03:32+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lisbeth"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T11:19:38+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-739606545"/>
+		<event>
+			<string key="org:resource" value="Joris"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T18:24:57+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Joris"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-03T18:34:02+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-740409214"/>
+		<event>
+			<string key="org:resource" value="Vincent"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-04T12:15:41+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vincent"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T12:12:12+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-740676462"/>
+		<event>
+			<string key="org:resource" value="John"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-04T17:38:12+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="John"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T17:49:54+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-741758638"/>
+		<event>
+			<string key="org:resource" value="Peter"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T15:51:27+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Peter"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-24T08:04:34+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-741807021"/>
+		<event>
+			<string key="org:resource" value="Sylvie"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T16:19:57+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Sylvie"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-09T14:42:38+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-741753047"/>
+		<event>
+			<string key="org:resource" value="Jack"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T16:22:07+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Jack"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T16:24:21+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-741995108"/>
+		<event>
+			<string key="org:resource" value="Summy"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T20:56:41+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Summy"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T15:58:31+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Summy"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T16:19:47+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Summy"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T16:23:42+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Summy"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T19:29:34+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Summy"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T19:29:59+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-741995344"/>
+		<event>
+			<string key="org:resource" value="Robert"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T21:00:49+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Robert"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T21:02:48+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Edward"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T21:04:55+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Edward"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-24T17:46:48+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-741987554"/>
+		<event>
+			<string key="org:resource" value="Vesa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T21:07:13+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vesa"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-07T21:11:09+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vesa"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T16:14:03+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vesa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T16:17:43+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vesa"/>
+			<string key="concept:name" value="Accepted_Wait"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T17:04:41+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vesa"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T18:53:55+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Björn"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T19:27:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Björn"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T14:18:55+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-742216614"/>
+		<event>
+			<string key="org:resource" value="Robert"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T13:54:44+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Bhim"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T15:07:03+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Bhim"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T15:11:01+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-742296921"/>
+		<event>
+			<string key="org:resource" value="Robert"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T14:27:37+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Robert"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T14:30:54+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vaibhav"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-22T17:28:14+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vaibhav"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-22T18:12:41+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-742397728"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T19:48:23+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-08T19:50:22+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-743659911"/>
+		<event>
+			<string key="org:resource" value="Lars"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-10T18:53:26+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lars"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-31T18:19:08+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-743923075"/>
+		<event>
+			<string key="org:resource" value="Suzanne"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-11T11:10:04+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Suzanne"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-30T12:57:00+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-744020867"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-11T14:32:41+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-11T14:35:47+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-744096281"/>
+		<event>
+			<string key="org:resource" value="Avvaru"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-11T15:44:22+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Avvaru"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-29T10:23:44+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-744436513"/>
+		<event>
+			<string key="org:resource" value="Hari"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-13T04:55:10+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Hari"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-13T04:56:10+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Patrik"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-15T11:58:46+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Patrik"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-15T12:06:53+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-744436815"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-13T19:29:31+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-13T19:30:04+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-744436853"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-13T19:54:39+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-13T20:01:55+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-744771526"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T14:27:18+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T14:28:52+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-744867338"/>
+		<event>
+			<string key="org:resource" value="Christer"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T15:50:28+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Christer"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-21T13:48:01+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-744961184"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T17:12:01+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T17:14:26+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-744961783"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T17:44:18+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T17:56:34+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-744812279"/>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T20:27:12+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-14T20:33:42+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-745176353"/>
+		<event>
+			<string key="org:resource" value="Ruchi"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-15T04:30:02+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ruchi"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T03:59:49+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-745323752"/>
+		<event>
+			<string key="org:resource" value="Per"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-15T12:09:29+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Per"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-31T00:12:43+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-745590142"/>
+		<event>
+			<string key="org:resource" value="Åsa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-15T17:47:11+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Åsa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-31T16:34:39+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-745630444"/>
+		<event>
+			<string key="org:resource" value="Vishal"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-15T19:19:08+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Vishal"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-15T19:27:51+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-745528120"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-15T19:35:05+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-15T19:38:18+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-745791842"/>
+		<event>
+			<string key="org:resource" value="Ruchi"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T05:13:02+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ruchi"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T05:18:13+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-746011641"/>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T14:04:19+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Rakesh"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-21T14:18:48+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-746123906"/>
+		<event>
+			<string key="org:resource" value="Hineesh"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T15:23:17+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Hineesh"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-22T14:19:21+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-746191809"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T19:12:20+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T19:54:28+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-746374026"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-16T19:58:10+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-17T18:46:59+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-746662247"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-17T18:20:58+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-17T18:30:49+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-746662619"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-17T18:51:43+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-18T18:10:30+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-746969187"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-18T14:29:44+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-18T14:32:34+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-746969236"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-18T14:42:26+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-18T14:43:58+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-747147608"/>
+		<event>
+			<string key="org:resource" value="Charlotta"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-19T00:02:06+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Charlotta"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-24T11:36:08+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-747373035"/>
+		<event>
+			<string key="org:resource" value="Ashwani"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-19T17:21:09+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ashwani"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-19T17:53:02+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-747680998"/>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-21T13:17:33+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tomas"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-21T13:29:25+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Björn T"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-21T13:31:04+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Björn T"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T11:56:40+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-747810698"/>
+		<event>
+			<string key="org:resource" value="Thomas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-21T18:44:23+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Thomas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T17:40:55+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-748204098"/>
+		<event>
+			<string key="org:resource" value="Reine"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-22T04:19:54+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Reine"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-31T11:38:22+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-748384181"/>
+		<event>
+			<string key="org:resource" value="Himmath"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-22T12:53:45+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Himmath"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-22T12:54:00+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-748438405"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-22T13:57:53+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-22T14:03:02+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-748680387"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-22T18:47:41+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-22T19:02:17+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-748850514"/>
+		<event>
+			<string key="org:resource" value="Hineesh"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T10:18:50+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Hineesh"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-29T08:43:36+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-749012057"/>
+		<event>
+			<string key="org:resource" value="Elisabet"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T13:19:58+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Elisabet"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-23T13:21:06+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tony"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-28T17:33:20+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Tony"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-28T17:36:00+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-749747547"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-24T17:59:11+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-24T18:00:55+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-751002678"/>
+		<event>
+			<string key="org:resource" value="Anurag"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-28T17:36:41+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Anurag"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-28T17:52:22+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-751378836"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-29T13:54:33+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-29T14:08:42+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-751622091"/>
+		<event>
+			<string key="org:resource" value="Morten"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-29T20:05:02+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Larry"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-30T00:06:41+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Larry"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-30T00:09:36+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-752067921"/>
+		<event>
+			<string key="org:resource" value="Lars"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-30T13:41:37+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lars"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-30T13:49:50+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Lars"/>
+			<string key="concept:name" value="Queued_Awaiting Assignment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-30T16:50:42+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Eva-Lott"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-30T17:15:25+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Eva-Lott"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-30T17:17:53+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-752134249"/>
+		<event>
+			<string key="org:resource" value="Karl"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-30T16:55:35+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Karl"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-30T17:04:30+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-752600115"/>
+		<event>
+			<string key="org:resource" value="Niklas"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-31T13:58:45+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Niklas"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-31T14:01:24+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="1-752835764"/>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Accepted_In Progress"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-31T22:07:59+02:00"/>
+		</event>
+		<event>
+			<string key="org:resource" value="Ewa"/>
+			<string key="concept:name" value="Completed_Closed"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2012-05-31T22:09:21+02:00"/>
+		</event>
+	</trace>
+</log>

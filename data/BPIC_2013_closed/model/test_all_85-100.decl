@@ -1,0 +1,14 @@
+activity Completed_Closed
+bind Completed_Closed: org:resource
+activity Accepted_In Progress
+bind Accepted_In Progress: org:resource
+activity Accepted_Assigned
+bind Accepted_Assigned: org:resource
+org:resource: Prasad, Björn T, Ola, Anette, Marek, Marlene, Tarun, Karl, Bhim, Michael, Umar Farooque, Komaraiah, Pascal, Ulrik, Reine, Srinivasa, Vaibhav, Daniel, -, Vishal, Anil, Avinash, Tamara, Kymaria, Tomas, Malin, Pankaj, Pratap, Andreas, Abhimanyu, Claes, Nicolas, Himmath, Michal, Partha, Harshavardhan, Lennart, Thomas, Anurag, Rickard, Amit, Göran, Martin, Kamal, Kristina, Fabien, Christophe, Adriano, Pai, Jerome, Sandrine, Shin, Charlotte, Patricia, Charlotta, Hongjae, Rakesh, Nagaraj, Els, Ulf, Kenneth, Florent, Eva-Lott, Jason, Morten, Praveen, Sachin, Noriaki, Rohit, Allan, William, Chew Khong, Kim, Lars, Bjarne, Arun, Giwan, Stefan, Maria, Hans, Niklas, Elisabet, Marc, Inge, Umar, Alexander, Nancy, Himanshu, Miroslaw, Edward, Preeti, Linda, Rafal, Ann-Charlotte, Larry, Alain, Anna, Vincent, Bikshamaiah, Akanksha, Anith, Viktoria, Danish, Per, Stephen, Manoj, Raul, John, Varun, Hilde, Reinier, Christy, Jaroslaw, Danny, Samira, Hemanth, Joanne, Srinivasan, Radha, Gitt, Vinodhkumar, Joakim, Victoria, Per-Erik, Lena, Mahesh, Nicky, Krzysztof, Karel, Venkanna, Hari, Neeraj, Lukasz, Désirée, Deepa, Gunilla, Jenny, Per-Olof, Aneesh V, Raphael, Aurelien, Peder, Pranesh, Suman, Klas, Bruno, Jonathan, Johan, Cyril, Celine, Amar, Agneta, Lisbeth, James, Anders, Mikael, Ikutoshi, Jiheung, Steve, Vesa, Ala, Sebastien, Peter, Håkan, Abhinav, Sarath, Mohsin, Tony, Lars-Erik, Kåre, Jörgen, Fredrik, Robert, Jolanta, Kristoffer, Marijn, Björn, Sarvesh, Patrik, Avishek, Avvaru, Niclas, Alice, Alam, Jon, MV, Christofer, Karin, Tomasz, Christer, David, Sam, Santosh, Murali, Dieter, Dweep, Hineesh, Jitender, Tadeusz, Ewa, Sreelesh, Donald, Thiruvenkidam, Åsa, Joris, Sylvie, Ryouhei, Thiago, Maciej, Shibly, Inger, Ruchi, Jack, Jonas, Summy, Raja, Lauro, Anson, Donna, Matias, Rajkishore, Mariusz, Rijin, Suzanne, Hannele, Britt, Jian, Roland, Christian, Sivakumar, Ashwani, Mattias
+Not Succession[Completed_Closed, Accepted_In Progress] | | |
+Existence[Completed_Closed] | |
+Response[Accepted_In Progress, Completed_Closed] | | |
+Existence[Accepted_In Progress] | |
+Not Co-Existence[Accepted_Assigned, Completed_Closed] | | |
+Not Co-Existence[Accepted_Assigned, Accepted_In Progress] | | |
+Chain Precedence[Accepted_In Progress, Completed_Closed] | | |

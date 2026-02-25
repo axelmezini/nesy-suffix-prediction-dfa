@@ -1,0 +1,32 @@
+digraph MONA_DFA {
+ rankdir = LR;
+ center = true;
+ size = "7.5,10.5";
+ edge [fontname = Courier];
+ node [height = .5, width = .5];
+ node [shape = doublecircle]; 8;
+ node [shape = circle]; 1;
+ init [shape = plaintext, label = ""];
+ init -> 1;
+ 1 -> 1 [label="~a_admission_ic & ~a_crp & ~a_er_registration & ~a_er_sepsis_triage & ~a_er_triage & ~a_leucocytes"];
+ 1 -> 2 [label="a_admission_ic | a_crp | a_er_sepsis_triage | a_er_triage | a_leucocytes"];
+ 1 -> 3 [label="a_er_registration & ~a_admission_ic & ~a_crp & ~a_er_sepsis_triage & ~a_er_triage & ~a_leucocytes"];
+ 2 -> 2 [label="true"];
+ 3 -> 2 [label="a_admission_ic | a_crp | a_er_registration | a_er_sepsis_triage | a_leucocytes | ~a_er_triage"];
+ 3 -> 4 [label="a_er_triage & ~a_admission_ic & ~a_crp & ~a_er_registration & ~a_er_sepsis_triage & ~a_leucocytes"];
+ 4 -> 2 [label="a_admission_ic | a_crp | a_er_registration | a_er_triage | a_leucocytes | ~a_er_sepsis_triage"];
+ 4 -> 5 [label="a_er_sepsis_triage & ~a_admission_ic & ~a_crp & ~a_er_registration & ~a_er_triage & ~a_leucocytes"];
+ 5 -> 5 [label="~a_admission_ic & ~a_crp & ~a_er_registration & ~a_er_sepsis_triage & ~a_er_triage & ~a_leucocytes"];
+ 5 -> 2 [label="a_admission_ic | a_er_registration | a_er_sepsis_triage | a_er_triage"];
+ 5 -> 6 [label="a_leucocytes & ~a_admission_ic & ~a_crp & ~a_er_registration & ~a_er_sepsis_triage & ~a_er_triage"];
+ 5 -> 7 [label="a_crp & ~a_admission_ic & ~a_er_registration & ~a_er_sepsis_triage & ~a_er_triage & ~a_leucocytes"];
+ 5 -> 8 [label="a_crp & a_leucocytes & ~a_admission_ic & ~a_er_registration & ~a_er_sepsis_triage & ~a_er_triage"];
+ 6 -> 6 [label="~a_admission_ic & ~a_crp & ~a_er_registration & ~a_er_sepsis_triage & ~a_er_triage"];
+ 6 -> 2 [label="a_admission_ic | a_er_registration | a_er_sepsis_triage | a_er_triage"];
+ 6 -> 8 [label="a_crp & ~a_admission_ic & ~a_er_registration & ~a_er_sepsis_triage & ~a_er_triage"];
+ 7 -> 7 [label="~a_admission_ic & ~a_er_registration & ~a_er_sepsis_triage & ~a_er_triage & ~a_leucocytes"];
+ 7 -> 2 [label="a_admission_ic | a_er_registration | a_er_sepsis_triage | a_er_triage"];
+ 7 -> 8 [label="a_leucocytes & ~a_admission_ic & ~a_er_registration & ~a_er_sepsis_triage & ~a_er_triage"];
+ 8 -> 8 [label="~a_admission_ic & ~a_er_registration & ~a_er_sepsis_triage & ~a_er_triage"];
+ 8 -> 2 [label="a_admission_ic | a_er_registration | a_er_sepsis_triage | a_er_triage"];
+}
