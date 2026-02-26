@@ -1,23 +1,24 @@
-root_path: 'path_to_results'
-datasets: [sepsis, BPIC_2013_closed, BPIC_2020_travel]
+root_path: 'path_to_root' # Folder must contain data/
 
-template_type: all
-template_support: 85-100
+datasets: [BPIC_2013_closed, BPIC_2020_travel, sepsis]
+template_type: all # Constraint types considered
+template_support: 85-100 # Constraint support
 
 noise_levels: ['01', '02', '03', '04']
+alpha_levels: [0.05, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 0.95]
+architecture: LSTM # LSTM | transformer
+models: [baseline, GLL, LLL] # baseline | GLL | LLL
 portion: 1
 
-alpha_levels: [0.25, 0.75]
-
-modes: [baseline, GLL, LLL]
-architecture: Transformer
-nr_runs: 15
-hidden_dim: 100
-nr_epochs: 2000
-min_epochs: 500
+nr_runs: 15 # Number of runs for each configuration
+hidden_dim: 100 # Number of hidden dimensions of architecture
 temperature: 0.7
+
 batch_size: 64
-patience: 35
-min_delta: 0.00001
-min_loss: 0.01
-lr: 0.0005
+nr_epochs: 2000 # Total number of epochs
+min_epochs: 500 # Minimum number of epochs before early stopping
+lr: 0.0005 # Learning rate of optimizer
+
+patience: 35 # Patience of early stopping
+min_delta: 0.00001 # Min loss difference
+min_loss: 0.01 # Min loss
