@@ -17,8 +17,6 @@ from common.declare_model import Model
 from common.dfa import SymbolicDFA
 
 
-#TODO: spostare Model, e symolic dfa check all'interno di symbolic dfa
-#TODO: spostare acceptance in un posto piu adeguato
 def main():
     config = Config('config.yaml')
 
@@ -52,9 +50,6 @@ def main():
 
                 experiment = Experiment(config, dataset, prefixes, noise, alpha)
                 experiment.run(train_dataset, test_dataset, deep_dfa, event_names + ['end'])
-                experiment.save_results()
-                #experiment.plot_results()
-
 
 
 def print_start_acceptance(train_dataset, test_dataset, deep_dfa, config):

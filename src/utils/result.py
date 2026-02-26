@@ -2,10 +2,13 @@ from common.sampling import evaluate_similarity, evaluate_satisfiability
 
 
 class Result:
-    def __init__(self, run_folder, run_id, model_type, train_acc, test_acc, nr_epochs, training_time):
-        self.run_folder = run_folder
+    def __init__(self, architecture, dataset, noise, alpha, run_id, model, train_acc, test_acc, nr_epochs, training_time):
+        self.architecture = architecture
+        self.dataset = dataset
+        self.noise = noise
+        self.alpha = alpha
         self.run_id = run_id
-        self.model_type = model_type
+        self.model = model
         self.train_accuracy = train_acc
         self.test_accuracy = test_acc
         self.nr_epochs = nr_epochs
@@ -36,18 +39,22 @@ class Result:
 
     def get_result_row(self, prefix, strategy, train_dl, train_dl_scaled, test_dl, test_dl_scaled, train_sat, test_sat):
         return {
+            'architecture': self.architecture,
+            'dataset': self.dataset,
+            'noise': self.noise,
+            'alpha': self.alpha,
             'run_id': self.run_id,
-            'prefix length': prefix,
-            'model': self.model_type,
-            'sampling strategy': strategy,
-            'train accuracy': self.train_accuracy,
-            'test accuracy': self.test_accuracy,
-            'train DL': train_dl,
-            'train DL scaled': train_dl_scaled,
-            'test DL': test_dl,
-            'test DL scaled': test_dl_scaled,
-            'train sat': train_sat,
-            'test sat': test_sat,
+            'model': self.model,
+            'prefix_length': prefix,
+            'sampling_strategy': strategy,
+            'train_accuracy': self.train_accuracy,
+            'test_accuracy': self.test_accuracy,
+            'train_DL': train_dl,
+            'test_DL': test_dl,
+            'train_DL scaled': train_dl_scaled,
+            'test_DL scaled': test_dl_scaled,
+            'train_sat': train_sat,
+            'test_sat': test_sat,
             'nr_epochs': self.nr_epochs,
             'training_time': self.training_time
         }
