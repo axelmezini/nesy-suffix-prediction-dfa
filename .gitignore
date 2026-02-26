@@ -1,0 +1,8 @@
+.idea/
+.venv/
+__pycache__/
+
+config.yaml
+TODO.txt
+script-gpu_low.batch
+script-mgg.batch
