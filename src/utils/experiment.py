@@ -61,8 +61,8 @@ class Experiment:
             predictions = {
                 'train_temperature': sample(architecture, train_ds, prefix, self.config.device, self.config.temperature, g=g),
                 'test_temperature': sample(architecture, test_ds, prefix, self.config.device, self.config.temperature, g=g),
-                'train_greedy': sample(architecture, train_ds, prefix, self.config.device, 0),
-                'test_greedy': sample(architecture, test_ds, prefix, self.config.device, 0)
+                'train_greedy': sample(architecture, train_ds, prefix, self.config.device),
+                'test_greedy': sample(architecture, test_ds, prefix, self.config.device)
             }
             model_results.add_predictions(prefix, predictions)
 

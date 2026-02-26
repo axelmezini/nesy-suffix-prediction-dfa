@@ -5,7 +5,8 @@ from jellyfish import damerau_levenshtein_distance
 import torch
 import torch.nn.functional as F
 
-def sample_token(logits, temperature=1.0, g=None):
+
+def sample_token(logits, temperature=0, g=None):
     if temperature == 0:
         return torch.argmax(logits, dim=-1, keepdim=True)
     else:
@@ -14,11 +15,10 @@ def sample_token(logits, temperature=1.0, g=None):
         return torch.multinomial(probs, num_samples=1, generator=g)
 
 
-def sample(model, dataset, prefix_len, device, temperature=1.0, g=None):
+def sample(model, dataset, prefix_len, device, temperature=0, g=None):
     dataset = dataset.to(device)
     prefix = dataset[:, :prefix_len, :]
     predicted_traces = prefix.clone()
-    #print('dataset', dataset.size())
 
     stop_event = torch.zeros(dataset.size(-1), dtype=torch.float, device=device)
     stop_event_idx = dataset.size(-1) - 1
