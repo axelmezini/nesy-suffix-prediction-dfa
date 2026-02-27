@@ -7,8 +7,6 @@ import torch
 from torch import nn
 
 
-# TODO: divide into smaller methods init from file
-# TODO: make dfa creation more performant
 class SymbolicDFA:
     def __init__(self, labels, folder_path):
         self.labels = labels
@@ -119,33 +117,17 @@ def valid_tokens_for_guard(guard_expr, tokens):
     return valid
 
 
-#TODO: fare in modo che posso fare depp_dfa.to(device) senza passarlo
 class DeepDFA(nn.Module):
     def __init__(self, n_states, n_actions, device):
         super(DeepDFA, self).__init__()
         self.n_states = n_states
         self.n_actions = n_actions
         self.device = device
-        # self.trans_prob = torch.normal(0, 0.1, size=(n_actions, n_states, n_states), requires_grad=False, device=device)
-        # self.accepting_matrix = torch.normal(0, 0.1, size=(n_states, 2), requires_grad=False, device=device)
         self.trans_prob = torch.zeros((n_actions, n_states, n_states), requires_grad=False, device=device)
         self.accepting_matrix = torch.zeros((n_states, 2), requires_grad=False, device=device)
         self.rejecting_matrix = torch.zeros((n_states, 2), requires_grad=False, device=device)
 
     def build(self, state_types, edges, labels):
-        """
-        with torch.no_grad():
-            # zeroing transition probabilities
-            for a in range(self.numb_of_actions):
-                for s1 in range(self.numb_of_states):
-                    for s2 in range(self.numb_of_states):
-                        self.trans_prob[a, s1, s2] = 0.0
-
-            # zeroing output matrix
-            for s in range(self.numb_of_states):
-                for r in range(self.numb_of_outputs):
-                    self.accepting_matrix[s, r] = 0.0
-        """
         labels_map = {label: i for i, label in enumerate(labels + ['end'])}
 
         with torch.no_grad():

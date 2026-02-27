@@ -1,12 +1,10 @@
 import re
 
 
-#TODO: Double check formulas
 class Model:
     def __init__(self, root_path, dataset, template_type, template_support):
         self.folder_path = f'{root_path}datasets/{dataset}/model/'
         self.name = f'test_{template_type}_{template_support}'
-        #self.name = f'concept_drift_{template_type}_{template_support}'
         self.content = self.read_from_file()
         self.formulas = []
 

@@ -1,13 +1,13 @@
 import os
 import math
 import statistics
+import random
 import numpy as np
 import torch
 import pm4py
 from common.declare_model import clean_activity_name
 
 
-#TODO: log noise injection da implementare
 class Log:
     def __init__(self, root_path, dataset, filename):
         folder_path = str(os.path.join(root_path, 'datasets', dataset, 'log'))
@@ -25,7 +25,7 @@ class Log:
                     event_names.append(event_name)
         return event_names
 
-    def encode(self, event_names, subset=1):
+    def encode(self, event_names):
         self.event_names = event_names
         event_to_idx = {event: i for i, event in enumerate(self.event_names)}
         num_classes = len(self.event_names) + 1
@@ -68,6 +68,26 @@ class Log:
             traces_strings.append(', '.join(trace_events))
 
         return '\n'.join(traces_strings)
+
+    def add_noise(self, noise_level):
+        activity_names = set()
+        for trace in self.event_log:
+            for event in trace:
+                activity_names.add(event['concept:name'])
+        activity_names = list(activity_names)
+
+        noise_perc = int(noise_level) * 0.1
+        num_to_substitute = int(sum(len(trace) for trace in self.event_log) * noise_perc)
+
+        all_events = [(i, j) for i, trace in enumerate(self.event_log) for j, _ in enumerate(trace)]
+        to_substitute_indices = set(random.sample(all_events, num_to_substitute))
+
+        for i, j in to_substitute_indices:
+            current_name = self.event_log[i][j]['concept:name']
+            choices = [name for name in activity_names if name != current_name]
+            if choices:
+                new_name = random.choice(choices)
+                self.event_log[i][j]['concept:name'] = new_name
 
     def get_first_prefix(self):
         traces_lengths = [len(trace) for trace in self.event_log]
