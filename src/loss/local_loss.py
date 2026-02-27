@@ -33,7 +33,7 @@ class LocalLogicLoss(nn.Module):
         weighted_ce_loss = (ce_loss_per_step * ce_weights).sum() / (ce_weights.sum() + 1e-6)
 
         # Symbolic Loss
-        invalid_mass = (probs * reject_mask.float()).sum(dim=-1).mean()
-        step_penalty = -torch.log(1.0 - invalid_mass + 1e-6)
+        invalid_mass = (probs * reject_mask.float()).sum(dim=-1)
+        step_penalty = -torch.log(1.0 - invalid_mass + 1e-6).mean()
 
         return self.alpha * weighted_ce_loss + (1 - self.alpha) * step_penalty
