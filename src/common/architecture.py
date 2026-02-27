@@ -1,3 +1,4 @@
+import os
 import torch
 from torch import nn
 
@@ -9,11 +10,6 @@ class LSTM(nn.Module):
         self.output_layer = nn.Linear(hidden_dim, vocab_size)
 
     def forward(self, x):
-        #batch_size = x.size()[0]
-        #h0 = torch.zeros(self.num_layers, batch_size, self.hidden_dim).to(device)
-        #c0 = torch.zeros(self.num_layers, batch_size, self.hidden_dim).to(device)
-        #output, (hn, cn) = self.lstm(x, (h0, c0))
-
         output, (hn, cn) = self.lstm(x)
         logits = self.output_layer(output)
         return logits, (hn, cn)
@@ -22,6 +18,11 @@ class LSTM(nn.Module):
         output, (hn, cn) = self.lstm(x, state)
         logits = self.output_layer(output)
         return logits, (hn, cn)
+
+    def export(self, folder, run_id, model):
+        torch.save(self.state_dict(), os.path.join(folder, f'r{run_id}_lstm_{model}.pt'))
+        del self
+        torch.cuda.empty_cache()
 
 
 class Transformer(nn.Module):
@@ -70,3 +71,8 @@ class Transformer(nn.Module):
             new_state = torch.cat((state, x), dim=1)
         logits, _ = self.forward(new_state)
         return logits, new_state
+
+    def export(self, folder, run_id, model):
+        torch.save(self.state_dict(), os.path.join(folder, f'r{run_id}_transformer_{model}.pt'))
+        del self
+        torch.cuda.empty_cache()
