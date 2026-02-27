@@ -49,12 +49,12 @@ class Result:
             'sampling_strategy': strategy,
             'train_accuracy': self.train_accuracy,
             'test_accuracy': self.test_accuracy,
-            'train_DL': train_dl,
-            'test_DL': test_dl,
-            'train_DL scaled': train_dl_scaled,
-            'test_DL scaled': test_dl_scaled,
-            'train_sat': train_sat,
-            'test_sat': test_sat,
+            'train_distance': train_dl,
+            'test_distance': test_dl,
+            'train_similarity_scaled': train_dl_scaled,
+            'test_similarity_scaled': test_dl_scaled,
+            'train_satisfiability': train_sat,
+            'test_satisfiability': test_sat,
             'nr_epochs': self.nr_epochs,
             'training_time': self.training_time
         }
