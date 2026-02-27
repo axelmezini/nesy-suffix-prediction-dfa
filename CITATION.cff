@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper."
+title: "Neuro-Symbolic Predictive Process Monitoring"
+url: https://github.com/axelmezini/nesy-suffix-prediction-dfa
+authors:
+  - family-names: Mezini
+    given-names: Axel
+  - family-names: Umili
+    given-names: Elena
+  - family-names: Donadello
+    given-names: Ivan
+  - family-names: Maggi
+    given-names: Fabrizio Maria
+  - family-names: Mancanelli
+    given-names: Matteo
+  - family-names: Patrizi
+    given-names: Fabio
+
+preferred-citation:
+  type: article
+  title: "Neuro-Symbolic Predictive Process Monitoring"
+  authors:
+    - family-names: Mezini
+      given-names: Axel
+    - family-names: Umili
+      given-names: Elena
+    - family-names: Donadello
+      given-names: Ivan
+    - family-names: Maggi
+      given-names: Fabrizio Maria
+    - family-names: Mancanelli
+      given-names: Matteo
+    - family-names: Patrizi
+      given-names: Fabio
+  year: 2025
+  archive: arXiv
+  archive-location: "2509.00834"
+  url: "https://arxiv.org/abs/2509.00834"
+  abstract: "Preprint available on arXiv:2509.00834"
