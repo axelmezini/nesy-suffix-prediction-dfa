@@ -30,10 +30,12 @@ nesy-suffix-prediction-dfa/
 │
 ├── runner.py              # Main entry point
 ├── requirements.txt       # Python dependencies
-├── config.yaml/           # Configuration template
+├── config_example.yaml/   # Configuration template
 ├── src/                   # Core implementation
 ├── data/                  # Datasets
+├── results/               # Results
 ├── README.md
+├── .gitignore
 └── LICENCE
 ```
 
@@ -57,7 +59,7 @@ nesy-suffix-prediction-dfa/
 
 2. Install dependencies
     ```bash
-    pip install -r requirements.txt
+    conda env create -f environment.yml
     ```
 
 3. Create configuration file
@@ -74,9 +76,13 @@ To reproduce a specific experiment:
 1. Ensure MONA is correctly installed.
 2. Ensure the correct dataset is available in the `data/` directory.
 3. Set experiment parameters in `config.yaml` to match the paper setup. For exact parameter settings, refer to the experimental section of the paper.
-4. Run:
+4. Activate the environment:
     ```bash
-      python -m runner.py
+    conda activate myenv
+    ```
+5. Run:
+    ```bash
+    python -m src/runner.py
     ```
 
 Results will be written to the configured output directory.
