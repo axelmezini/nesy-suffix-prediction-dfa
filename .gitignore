@@ -3,6 +3,7 @@
 __pycache__/
 
 config.yaml
+environment_builds.yaml
 TODO.txt
 script-gpu_low.batch
 script-mgg.batch
