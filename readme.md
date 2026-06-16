@@ -4,7 +4,7 @@
 
 *Axel Mezini, Elena Umili, Ivan Donadello, Fabrizio Maria Maggi, Matteo Mancanelli, Fabio Patrizi*
 
-This repository contains the source code accompanying the paper: [Neuro-Symbolic Predictive Process Monitoring](https://arxiv.org/abs/2509.00834). 
+This repository contains the source code accompanying the paper: [Neuro-Symbolic Predictive Process Monitoring](https://authors.elsevier.com/c/1nGKE15hGZkPXv). 
 The implementation provides the experimental framework used in the paper, including model execution, DFA-based symbolic components, and evaluation pipelines.
 
 ---
@@ -93,14 +93,18 @@ Results will be written to the configured output directory.
 
 If you use this code in your research, please cite:
 ```bibtex
-@misc{mezini2025neurosymbolicpredictiveprocessmonitoring,
-      title={Neuro-Symbolic Predictive Process Monitoring}, 
-      author={Axel Mezini and Elena Umili and Ivan Donadello and Fabrizio Maria Maggi and Matteo Mancanelli and Fabio Patrizi},
-      year={2025},
-      eprint={2509.00834},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2509.00834}, 
+@article{MEZINI2026102762,
+    title = {Neuro-Symbolic Predictive Process Monitoring},
+    journal = {Information Systems},
+    volume = {141},
+    pages = {102762},
+    year = {2026},
+    issn = {0306-4379},
+    doi = {https://doi.org/10.1016/j.is.2026.102762},
+    url = {https://www.sciencedirect.com/science/article/pii/S0306437926000761},
+    author = {Axel Mezini and Elena Umili and Ivan Donadello and Fabrizio Maria Maggi and Matteo Mancanelli and Fabio Patrizi},
+    keywords = {Suffix prediction, Neuro-Symbolic AI, Deep learning with logical knowledge, Linear Temporal Logic, Differentiable automata},
+    abstract = {This paper addresses the problem of suffix prediction in Business Process Management (BPM) by proposing a Neuro-Symbolic Predictive Process Monitoring (PPM) approach that integrates data-driven learning with temporal logic-based prior knowledge. While recent approaches leverage deep learning models for suffix prediction, they often fail to satisfy even basic logical constraints due to the lack of explicit integration of domain knowledge during training. We propose a novel method to incorporate Linear Temporal Logic over finite traces (LTLf ) into the training process of autoregressive sequence predictors. Our approach introduces a differentiable logical loss function, defined using a soft approximation of LTLf semantics and the Gumbel-Softmax trick, which can be combined with standard predictive losses. This ensures that the model learns to generate suffixes that are both accurate and logically consistent. Experimental evaluation on three real-world datasets shows that our method improves suffix prediction accuracy and compliance with temporal constraints. We also introduce two variants of the logic loss (local and global) and demonstrate their effectiveness under noisy and realistic settings. While developed in the context of BPM, our framework is applicable to any symbolic sequence generation task and contributes to advancing Neuro-Symbolic AI.}
 }
 ```
 
