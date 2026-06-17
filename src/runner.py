@@ -24,13 +24,13 @@ def main():
         full_log = Log(config.root_path, dataset, 'ordered')
         event_names = full_log.define_event_names()
 
-        dfa_folder_name = f'DFA_{config.template_type}_{config.template_support}/'
-        dfa_folder = os.path.join(config.root_path, 'datasets', dataset, 'model', dfa_folder_name)
+        dfa_folder_name = f'DFA_all_85-100/'
+        dfa_folder = os.path.join(config.root_path, 'data', dataset, 'model', dfa_folder_name)
         symbolic_dfa = SymbolicDFA(event_names, dfa_folder)
 
         if not os.path.exists(dfa_folder):
             os.makedirs(dfa_folder)
-            declare_model = Model(config.root_path, dataset, config.template_type, config.template_support)
+            declare_model = Model(config.root_path, dataset)
             symbolic_dfa.build_from_formula(declare_model.to_ltl())
         else:
             symbolic_dfa.build_from_file()

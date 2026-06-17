@@ -2,9 +2,9 @@ import re
 
 
 class Model:
-    def __init__(self, root_path, dataset, template_type, template_support):
-        self.folder_path = f'{root_path}datasets/{dataset}/model/'
-        self.name = f'test_{template_type}_{template_support}'
+    def __init__(self, root_path, dataset):
+        self.folder_path = f'{root_path}data/{dataset}/model/'
+        self.name = f'test_all_85-100'
         self.content = self.read_from_file()
         self.formulas = []
 

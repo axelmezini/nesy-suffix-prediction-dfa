@@ -10,7 +10,7 @@ from common.declare_model import clean_activity_name
 
 class Log:
     def __init__(self, root_path, dataset, filename):
-        folder_path = str(os.path.join(root_path, 'datasets', dataset, 'log'))
+        folder_path = str(os.path.join(root_path, 'data', dataset, 'log'))
         self.filename = filename
         self.event_log = pm4py.convert_to_event_log(pm4py.read_xes(os.path.join(folder_path, f'{self.filename}.xes')))
         self.event_names = []
@@ -93,12 +93,3 @@ class Log:
         traces_lengths = [len(trace) for trace in self.event_log]
         median = statistics.median(traces_lengths)
         return math.floor(median / 2)
-
-    def get_subset(self, portion):
-        if 0 < portion < 1:
-            N = self.tensor.size(0)
-            k = max(1, int(round(N * portion)))
-            idx = torch.randperm(N)[:k].sort().values
-            return self.tensor.index_select(0, idx)
-        else:
-            return self.tensor
