@@ -59,6 +59,7 @@ nesy-suffix-prediction-dfa/
 
 2. Install dependencies
     ```bash
+    conda config --set channel_priority flexible
     conda env create -f environment.yml
     ```
 

@@ -6,11 +6,11 @@ import pandas as pd
 import torch
 from common.architecture import LSTM, Transformer
 from common.training import train
-from common.sampling import sample
+from common.sampling_evaluation import sample
 from loss.local_loss import LocalLogicLoss
 from loss.global_loss import GlobalLogicLoss
 from utils.result import Result
-from utils.plotting import plot_metrics_as_bars
+from utils.plotting import plot_metric_bars
 
 
 class Experiment:
@@ -39,6 +39,8 @@ class Experiment:
             self.results_df = self.results_df.round(10)
             output_path = os.path.join(self.experiment_folder, 'results.csv')
             self.results_df.to_csv(output_path, index=False)
+
+            self.plot_results()
 
     def run_model(self, train_ds, test_ds, tensor_dfa, vocabulary, run_folder, run_id, model, g):
         architecture = self.define_architecture(self.config.architecture, vocabulary, train_ds)
@@ -102,6 +104,5 @@ class Experiment:
         return generator
 
     def plot_results(self):
-        for metric in ['accuracy', 'DL', 'DL scaled', 'sat']:
-            filename = os.path.join(self.experiment_folder, f'{metric}_mean.png')
-            plot_metrics_as_bars(self.results_df, metric, self.prefixes, filename, errorbar=True)
+        for metric in ['similarity_scaled', 'satisfiability']:
+            plot_metric_bars(self.results_df, 'test', metric, self.experiment_folder)
