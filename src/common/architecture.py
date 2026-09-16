@@ -1,4 +1,3 @@
-import os
 import torch
 from torch import nn
 
@@ -20,7 +19,7 @@ class LSTM(nn.Module):
         return logits, (hn, cn)
 
     def export(self, folder, run_id, model):
-        torch.save(self.state_dict(), os.path.join(folder, f'r{run_id}_lstm_{model}.pt'))
+        torch.save(self.state_dict(), str(folder / f'r{run_id}_lstm_{model}.pt'))
         del self
         torch.cuda.empty_cache()
 
@@ -73,6 +72,6 @@ class Transformer(nn.Module):
         return logits, new_state
 
     def export(self, folder, run_id, model):
-        torch.save(self.state_dict(), os.path.join(folder, f'r{run_id}_transformer_{model}.pt'))
+        torch.save(self.state_dict(), str(folder / f'r{run_id}_transformer_{model}.pt'))
         del self
         torch.cuda.empty_cache()
