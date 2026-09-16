@@ -2,11 +2,12 @@ import re
 
 
 class Model:
-    def __init__(self, root_path, dataset):
-        self.folder_path = f'{root_path}data/{dataset}/model/'
-        self.name = f'test_all_85-100'
+    def __init__(self, folder_path, filename):
+        self.folder_path = folder_path
+        self.name = filename
         self.content = self.read_from_file()
-        self.formulas = []
+        self.formulas = self.to_ltl()
+        self.dfa = None
 
     def to_ltl(self):
         formulas = []
@@ -22,11 +23,11 @@ class Model:
         return ' & '.join(self.formulas)
 
     def read_from_file(self):
-        with open(f'{self.folder_path}{self.name}.decl') as f:
+        with open(str(self.folder_path / f'{self.name}.decl')) as f:
             return f.read()
 
     def write_formula_to_file(self):
-        with open(f'{self.folder_path}{self.name}_ltl.txt', 'w') as f:
+        with open(str(self.folder_path / f'{self.name}_ltl.txt', 'w')) as f:
             f.write(' &\n'.join(self.formulas))
 
 
@@ -49,11 +50,13 @@ class DeclareConstraint:
         elif self.name == 'Absence':
             return f'(!(F({self.activation})))'
         elif self.name == 'Absence2':
-            return f'(!(F({self.activation} & X(F({self.activation})))))'
+            return f'(!(F({self.activation} & X(F({self.activation}))    )))'
         elif self.name == 'Absence3':
             return f'(!(F({self.activation} & X(F({self.activation} & X(F({self.activation})))))))'
         elif self.name == 'Exactly1':
             return f'(F({self.activation}) & !(F({self.activation} & X(F({self.activation})))))'
+        elif self.name == 'Exactly2':
+            return f'(F({self.activation} & X(F({self.activation}))) & !(F({self.activation} & X(F({self.activation} & X(F({self.activation})))))))'
         elif self.name == 'Choice':
             return f'(F({self.activation}) | F({self.target}))'
         elif self.name == "Exclusive Choice":
@@ -73,21 +76,22 @@ class DeclareConstraint:
         elif self.name == 'Alternate Precedence':
             return f'((((!{self.target} U {self.activation}) | G(!{self.target})) & G({self.target} ->((!(X({self.activation})) & !(X(!({self.activation})))) | X((!({self.target}) U {self.activation}) | G(!({self.target})))))) & !({self.target}))'
         elif self.name == 'Chain Precedence':
-            return f'(G(X({self.target}) -> {self.activation}))'
+            # return f'(G(X({self.target}) -> {self.activation}))' !!!
+            return f'(G(X({self.target}) -> {self.activation}) & !({self.target}))'
         elif self.name == 'Succession':
-            return f'(G({self.activation} -> F({self.target})) & (!({self.target}) U {self.activation}) | G (!{self.target}))'
+            return f'(G({self.activation} -> F({self.target})) & ((!({self.target}) U {self.activation}) | G(!({self.target}))))'
         elif self.name == 'Alternate Succession':
-            return f'(G({self.activation} -> X(! {self.activation} U {self.target})) & (!({self.target}) U {self.activation}) | G(!{self.target}))'
+            return f'(G({self.activation} -> X((!({self.activation})) U {self.target})) & (((!({self.target}) U {self.activation}) | G(!({self.target}))) & G({self.target} -> ((!(X({self.activation})) & !(X(!({self.activation})))) | X((!({self.target}) U {self.activation}) | G(!({self.target}))))) & !({self.target})))'
         elif self.name == 'Chain Succession':
-            return f'((G({self.activation} -> X({self.target}))) & (G(X({self.target}) -> {self.activation})))'
-        elif self.name == 'Alternate Succession':
-            return f'(G({self.activation} -> X(!({self.activation}) U {self.target})) & (!({self.target}) U {self.activation}) | G(!{self.target}))'
+            return f'(G({self.activation} -> X({self.target})) & G(X({self.target}) -> {self.activation}) & !({self.target}))'
+        elif self.name == 'Not Responded Existence':
+            return f'(F({self.activation}) -> !(F({self.target})))'
         elif self.name == 'Not Co-Existence':
             return f'(!(F({self.activation}) & F({self.target})))'
-        elif self.name == 'Not Succession':
-            return f'(G({self.activation} -> !(F({self.target}))))'
-        elif self.name == 'Not Chain Succession':
-            return f'(G({self.activation} -> !(X({self.target}))))'# & (G(X(!({self.target})) -> {self.activation})))'
+        elif self.name in ['Not Response', 'Not Precedence', 'Not Succession']:
+            return f'G({self.activation} -> !(F({self.target})))'
+        elif self.name in ['Not Chain Response', 'Not Chain Precedence', 'Not Chain Succession']:
+            return f'(G({self.activation} -> !(X({self.target}))))'
         else:
             return None
 
