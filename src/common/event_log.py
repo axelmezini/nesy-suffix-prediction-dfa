@@ -1,18 +1,20 @@
-import os
 import math
+from datetime import datetime
+from copy import deepcopy
 import statistics
 import random
 import numpy as np
 import torch
 import pm4py
+from pm4py.objects.log.obj import EventLog
 from common.declare_model import clean_activity_name
 
 
 class Log:
-    def __init__(self, root_path, dataset, filename):
-        folder_path = str(os.path.join(root_path, 'data', dataset, 'log'))
+    def __init__(self, folder_path, filename):
+        self.folder_path = folder_path
         self.filename = filename
-        self.event_log = pm4py.convert_to_event_log(pm4py.read_xes(os.path.join(folder_path, f'{self.filename}.xes')))
+        self.event_log = pm4py.convert_to_event_log(pm4py.read_xes(str(folder_path / f'{self.filename}.xes')))
         self.event_names = []
         self.tensor = None
 
@@ -69,25 +71,47 @@ class Log:
 
         return '\n'.join(traces_strings)
 
+    def order(self):
+        def get_trace_date(trace):
+            date = trace[0].get('time:timestamp')
+            # date = trace.attributes['time:timestamp']
+            return date if isinstance(date, datetime) else datetime.max
+
+        log_sorted = EventLog(sorted(self.event_log, key=get_trace_date))
+        pm4py.write_xes(self.event_log, self.folder_path / 'ordered.xes')
+        self.event_log = log_sorted
+
+    def split_train_test(self):
+        split_index = int(len(self.event_log) * 0.8)
+        train_log = EventLog(self.event_log[:split_index])
+        test_log = EventLog(self.event_log[split_index:])
+
+        pm4py.write_xes(train_log, self.folder_path / 'train_80.xes')
+        pm4py.write_xes(test_log, self.folder_path / 'test_20.xes')
+
     def add_noise(self, noise_level):
+        noised_log = deepcopy(self.event_log)
+
         activity_names = set()
-        for trace in self.event_log:
+        for trace in noised_log:
             for event in trace:
                 activity_names.add(event['concept:name'])
         activity_names = list(activity_names)
 
-        noise_perc = int(noise_level) * 0.1
-        num_to_substitute = int(sum(len(trace) for trace in self.event_log) * noise_perc)
+        noise_perc = noise_level / 100
+        num_to_substitute = int(sum(len(trace) for trace in noised_log) * noise_perc)
 
-        all_events = [(i, j) for i, trace in enumerate(self.event_log) for j, _ in enumerate(trace)]
+        all_events = [(i, j) for i, trace in enumerate(noised_log) for j, _ in enumerate(trace)]
         to_substitute_indices = set(random.sample(all_events, num_to_substitute))
 
         for i, j in to_substitute_indices:
-            current_name = self.event_log[i][j]['concept:name']
+            current_name = noised_log[i][j]['concept:name']
             choices = [name for name in activity_names if name != current_name]
             if choices:
                 new_name = random.choice(choices)
-                self.event_log[i][j]['concept:name'] = new_name
+                noised_log[i][j]['concept:name'] = new_name
+
+        pm4py.write_xes(noised_log, self.folder_path / f'train_80_n{noise_level}.xes')
 
     def get_first_prefix(self):
         traces_lengths = [len(trace) for trace in self.event_log]
