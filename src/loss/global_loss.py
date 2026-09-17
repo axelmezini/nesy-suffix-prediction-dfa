@@ -35,7 +35,7 @@ class GlobalLogicLoss(nn.Module):
             next_event = F.log_softmax(next_event[:, -1:, :], dim=-1)
             next_event_one_hot = gumbel_softmax(next_event, self.temperature)
 
-            dfa_state, dfa_rew = self.dfa.step_pi(dfa_state, next_event_one_hot.squeeze())
+            dfa_state, dfa_rew = self.dfa.step(dfa_state, next_event_one_hot.squeeze())
             next_event, rnn_state = self.model.forward_from_state(next_event_one_hot, rnn_state)
 
         dfa_rew = dfa_rew.view(batch_size, self.num_samples, 2)
