@@ -1,5 +1,4 @@
 from statistics import mean
-import random
 import numpy as np
 from jellyfish import damerau_levenshtein_distance
 import torch
@@ -23,11 +22,9 @@ def sample(model, dataset, prefix_len, device, temperature=0, g=None):
     stop_event = torch.zeros(dataset.size(-1), dtype=torch.float, device=device)
     stop_event_idx = dataset.size(-1) - 1
     stop_event[stop_event_idx] = 1.0
-
     stop_mask = torch.zeros(prefix.size(0), dtype=torch.bool).to(device)
 
     logits, rnn_state = model(prefix)
-
     for step in range(prefix_len, dataset.size(1)):
         logits_step = logits[:, -1, :]
         sample_idx = sample_token(logits_step, temperature, g)
@@ -82,9 +79,7 @@ def tensor_to_string(one_hot_tensor):
 
 
 def evaluate_satisfiability(dfa, predicted_traces):
-    traces = torch.argmax(predicted_traces, dim=-1)
-
-    r, _ = dfa(traces)
-    accepted = r[:, -1, -1]
+    _, reward = dfa(predicted_traces)
+    accepted = reward[:, -1]
 
     return accepted.mean().item()
