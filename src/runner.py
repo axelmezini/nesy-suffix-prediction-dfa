@@ -1,8 +1,9 @@
 import os
-os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
+os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'  # required by torch's deterministic cuBLAS ops
 
 from pathlib import Path
 import torch
+# Force fully deterministic/reproducible runs
 torch.use_deterministic_algorithms(True)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False  # set to false for reproducibility, True to boost performance
@@ -19,6 +20,11 @@ from common.dfa import SymbolicDFA
 
 
 def main():
+    """
+    Entry point: for each dataset, builds a DFA
+    from its DECLARE model, then runs an Experiment for every combination of
+    noise level and alpha value using that dataset's train/test logs
+    """
     config = Config('config.yaml')
 
     for dataset in config.datasets:
@@ -31,6 +37,8 @@ def main():
         dfa_folder = dataset_path / 'model' / dfa_folder_name
         symbolic_dfa = SymbolicDFA(event_names, dfa_folder)
 
+        # Build the DFA from the DECLARE model's LTL formula only if it hasn't
+        # been built before; otherwise reuse the cached DFA files on disk
         if not dfa_folder.exists():
             dfa_folder.mkdir(parents=True, exist_ok=True)
             declare_model = Model(dataset_path / 'model', model_name)

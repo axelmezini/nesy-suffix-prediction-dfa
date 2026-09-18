@@ -14,6 +14,10 @@ from utils.plotting import plot_metric_bars
 
 
 class Experiment:
+    """
+    Runs one noise/alpha experiment: trains every combination of architecture,
+    run, and loss function, collects results, and writes/plots them
+    """
     def __init__(self, config, dataset_name, prefixes, noise, alpha):
         self.config = config
         self.ds_name = dataset_name
@@ -24,6 +28,11 @@ class Experiment:
         self.experiment_folder = self.create_experiment_folder()
 
     def run(self, train_ds, test_ds, tensor_dfa, vocabulary):
+        """
+        Main experiment loop: for every architecture and run, seeds the RNGs
+        once per run and trains each loss variant on that same seed, then
+        accumulates all results and re-saves/re-plots after each run
+        """
         results = []
 
         for architecture in self.config.architectures:
@@ -46,6 +55,10 @@ class Experiment:
                 self.plot_results()
 
     def run_model(self, train_ds, test_ds, tensor_dfa, vocabulary, run_folder, run_id, loss, architecture, g):
+        """
+        Builds one model/loss combo, trains it, times the training, evaluates
+        it on the test prefixes, exports the trained model, and returns the evaluated results
+        """
         nn = self.define_architecture(architecture, vocabulary, train_ds)
         loss_fn = self.define_loss(loss, nn, tensor_dfa)
 
@@ -65,6 +78,10 @@ class Experiment:
         return model_results.evaluate_predictions(train_ds, test_ds, tensor_dfa)
 
     def test(self, nn, train_ds, test_ds, model_results, g):
+        """
+        For each prefix length, samples predictions on both train/test sets
+        using both temperature and greedy decoding, and records them
+        """
         for prefix in self.prefixes:
             predictions = {
                 'train_temperature': sample(nn, train_ds, prefix, self.config.device, self.config.temperature, g=g),
@@ -75,6 +92,10 @@ class Experiment:
             model_results.add_predictions(prefix, predictions)
 
     def define_architecture(self, architecture, vocabulary, train_ds):
+        """
+        Instantiates the requested model architecture on the configured device;
+        returns None (with a warning) if the name isn't recognized
+        """
         if architecture == 'LSTM':
             return LSTM(len(vocabulary), self.config.hidden_dim).to(self.config.device)
         elif architecture == 'transformer':
@@ -84,6 +105,10 @@ class Experiment:
             return None
 
     def define_loss(self, loss, architecture, tensor_dfa):
+        """
+        Instantiates the requested loss function; returns None (with a
+        warning) if the name isn't recognized
+        """
         if loss == 'baseline':
             return torch.nn.CrossEntropyLoss()
         elif loss == 'GLL':
@@ -95,6 +120,10 @@ class Experiment:
             return None
 
     def create_experiment_folder(self):
+        """
+        Creates (and returns) the output folder for this noise/alpha
+        experiment, named by timestamp, noise level, and alpha
+        """
         alpha_string = str(int(round(self.alpha * 100)))
         folder_name = f'{self.config.timestamp}_noise{self.noise}_alpha{alpha_string}'
         experiment_folder = Path(self.config.root_path) / 'results' / self.ds_name / folder_name
@@ -102,11 +131,19 @@ class Experiment:
         return experiment_folder
 
     def create_run_folder(self, run_number):
+        """
+        Creates (and returns) the subfolder for a single run within the
+        experiment folder
+        """
         run_folder = self.experiment_folder / f'run{run_number}'
         run_folder.mkdir(parents=True, exist_ok=True)
         return run_folder
 
     def set_seed(self, seed):
+        """
+        Seeds all relevant RNGs (random, numpy, torch, cuda) for reproducibility
+        and returns a device-bound generator for use in sampling
+        """
         random.seed(seed)
         np.random.seed(seed)
         torch.manual_seed(seed)
@@ -115,5 +152,9 @@ class Experiment:
         return generator
 
     def plot_results(self):
+        """
+        Generates bar plots of test-set similarity and satisfiability metrics
+        for the current results
+        """
         for metric in ['similarity_scaled', 'satisfiability']:
             plot_metric_bars(self.results_df, 'test', metric, self.experiment_folder)

@@ -2,6 +2,10 @@ import re
 
 
 class Model:
+    """
+    Loads a DECLARE model (.decl file), parses its constraints, and converts
+    them into a single combined LTL formula as conjunction of all constraints
+    """
     def __init__(self, folder_path, filename):
         self.folder_path = folder_path
         self.name = filename
@@ -10,6 +14,11 @@ class Model:
         self.dfa = None
 
     def to_ltl(self):
+        """
+        Parses each non-comment line of the .decl file (format:
+        "Template[activator]" or "Template[activator, target]"), converts
+        each matched constraint to LTL, and joins them all with logical AND
+        """
         formulas = []
         for row in self.content.split('\n'):
             if row and not row.startswith('#'):
@@ -32,6 +41,10 @@ class Model:
 
 
 class DeclareConstraint:
+    """
+    Represents a single DECLARE constraint, a template plus one or two
+    activity names, and knows how to translate itself into an LTL formula
+    """
     def __init__(self, template, activator, target):
         self.name = template
         self.activation = clean_activity_name(activator)
@@ -39,6 +52,10 @@ class DeclareConstraint:
             self.target = clean_activity_name(target)
 
     def to_ltl(self):
+        """
+        Lookup table mapping each DECLARE template to its standard LTL
+        translation; returns None for any unrecognized template name
+        """
         if self.name == 'Init':
             return f'({self.activation})'
         elif self.name == 'Existence':
@@ -76,7 +93,6 @@ class DeclareConstraint:
         elif self.name == 'Alternate Precedence':
             return f'((((!{self.target} U {self.activation}) | G(!{self.target})) & G({self.target} ->((!(X({self.activation})) & !(X(!({self.activation})))) | X((!({self.target}) U {self.activation}) | G(!({self.target})))))) & !({self.target}))'
         elif self.name == 'Chain Precedence':
-            # return f'(G(X({self.target}) -> {self.activation}))' !!!
             return f'(G(X({self.target}) -> {self.activation}) & !({self.target}))'
         elif self.name == 'Succession':
             return f'(G({self.activation} -> F({self.target})) & ((!({self.target}) U {self.activation}) | G(!({self.target}))))'
@@ -96,4 +112,8 @@ class DeclareConstraint:
             return None
 
 def clean_activity_name(name):
+    """
+    Normalizes an activity name into a valid LTL atom identifier
+    (lowercase, spaces/dashes/dots/parens replaced with underscores, "a_" prefixed)
+    """
     return f"a_{name.lower().replace(' ', '_').replace('-', '_').replace('.', '_').replace('(', '_').replace(')', '_')}"

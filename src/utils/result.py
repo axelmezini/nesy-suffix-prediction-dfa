@@ -2,6 +2,10 @@ from common.sampling_evaluation import evaluate_similarity, evaluate_satisfiabil
 
 
 class Result:
+    """
+    Holds one training run's metadata/metrics and its sampled predictions,
+    and turns those predictions into per-prefix, per-strategy result rows
+    """
     def __init__(self, architecture, dataset, noise, alpha, run_id, loss, train_acc, test_acc, nr_epochs, training_time):
         self.architecture = architecture
         self.dataset = dataset
@@ -16,9 +20,16 @@ class Result:
         self.predictions = {}
 
     def add_predictions(self, prefix, predictions):
+        """
+        Stores the sampled predictions for a given prefix length
+        """
         self.predictions[prefix] = predictions
 
     def evaluate_predictions(self, train_ds, test_ds, tensor_dfa):
+        """
+        Computes metrics for every stored prefix/strategy combination and
+        returns them as a list of result rows
+        """
         results = []
         for prefix, lists in self.predictions.items():
             for strategy in ['temperature', 'greedy']:
@@ -29,6 +40,10 @@ class Result:
         return results
 
     def calculate_metrics(self, prefix, strategy, train_pred, test_pred, train_ds, test_ds, tensor_dfa):
+        """
+        Computes similarity and DFA satisfiability for train/test predictions,
+        then assembles the result row
+        """
         train_dl, train_dl_scaled = evaluate_similarity(train_pred, train_ds)
         test_dl, test_dl_scaled = evaluate_similarity(test_pred, test_ds)
         train_sat = evaluate_satisfiability(tensor_dfa, train_pred)
@@ -38,6 +53,10 @@ class Result:
         )
 
     def get_result_row(self, prefix, strategy, train_dl, train_dl_scaled, test_dl, test_dl_scaled, train_sat, test_sat):
+        """
+        Assembles a single flat dict combining run metadata with the
+        computed metrics, ready to be turned into a DataFrame row
+        """
         return {
             'architecture': self.architecture,
             'dataset': self.dataset,

@@ -6,6 +6,11 @@ import torch.nn.functional as F
 
 
 class EarlyStopping:
+    """
+    Tracks training loss across epochs and signals when to stop: either the
+    loss hasn't improved by more than min_delta for `patience` epochs in a
+    row, or the loss has already dropped below min_loss
+    """
     def __init__(self, patience, min_delta, min_loss):
         self.patience = patience
         self.min_delta = min_delta
@@ -24,6 +29,12 @@ class EarlyStopping:
 
 
 def train(architecture, train_dataset, test_dataset, config, loss, loss_fn):
+    """
+    Trains the given model for up to config.nr_epochs, evaluating on the
+    test set each epoch; training only becomes eligible for early stopping
+    after config.min_epochs. Inputs/targets are the trace shifted by one
+    step. Returns the final epoch's train/test accuracy and the epoch it stopped at.
+    """
     device = config.device
     optim = torch.optim.Adam(params=architecture.parameters(), lr=config.lr)
     acc_func = torchmetrics.Accuracy(task='multiclass', num_classes=train_dataset.size(-1), top_k=1).to(device)
@@ -48,6 +59,11 @@ def train(architecture, train_dataset, test_dataset, config, loss, loss_fn):
 
 
 def train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, loss):
+    """
+    Runs one training epoch over all batches: for the baseline loss uses
+    plain cross-entropy, otherwise defers to the custom loss_fn; returns
+    mean loss and accuracy across batches
+    """
     batch_accuracies, batch_losses = [], []
 
     for X, Y in train_loader:
@@ -74,6 +90,11 @@ def train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, lo
 
 
 def test(architecture, test_dataset, acc_func, device, batch_size):
+    """
+    Evaluates the model on the test set using plain
+    cross-entropy loss on next-event prediction; returns mean loss and
+    accuracy across batches
+    """
     accuracies,  losses = [], []
 
     X_data = test_dataset[:, :-1, :]

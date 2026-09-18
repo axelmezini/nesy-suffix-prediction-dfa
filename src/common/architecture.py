@@ -3,28 +3,46 @@ from torch import nn
 
 
 class LSTM(nn.Module):
+    """
+    2-layer LSTM sequence model that predicts next-event logits at each step
+    """
     def __init__(self, vocab_size, hidden_dim):
         super().__init__()
         self.lstm = nn.LSTM(vocab_size, hidden_dim, num_layers=2, batch_first=True)
         self.output_layer = nn.Linear(hidden_dim, vocab_size)
 
     def forward(self, x):
+        """
+        Runs the full input sequence through the LSTM from a fresh (zero) state
+        """
         output, (hn, cn) = self.lstm(x)
         logits = self.output_layer(output)
         return logits, (hn, cn)
 
     def forward_from_state(self, x, state):
+        """
+        Continues generation from a given hidden/cell state; used for
+        step-by-step/autoregressive sampling
+        """
         output, (hn, cn) = self.lstm(x, state)
         logits = self.output_layer(output)
         return logits, (hn, cn)
 
     def export(self, folder, run_id, loss):
+        """
+        Saves model weights to disk, then frees the model and clears the
+        CUDA cache
+        """
         torch.save(self.state_dict(), str(folder / f'r{run_id}_lstm_{loss}.pt'))
         del self
         torch.cuda.empty_cache()
 
 
 class Transformer(nn.Module):
+    """
+    Causal (decoder-only style) Transformer encoder that predicts next-event
+    logits, using learned positional embeddings up to max_len
+    """
     def __init__(self, vocab_size, d_model, nhead, num_layers, dim_feedforward, max_len):
         super().__init__()
         self.vocab_size = vocab_size
@@ -43,9 +61,15 @@ class Transformer(nn.Module):
         self.out_proj = nn.Linear(d_model, vocab_size)
 
     def _causal_mask(self, seq_len, device):
+        # Upper-triangular boolean mask (excluding diagonal) so each position
+        # can only attend to itself and earlier positions
         return torch.triu(torch.ones(seq_len, seq_len, device=device, dtype=torch.bool), diagonal=1)
 
     def forward(self, x):
+        """
+        Projects input events to d_model, adds positional embeddings, applies
+        the causal transformer encoder, and projects back to vocab logits
+        """
         bsz, seq_len, v = x.size()
         if v != self.vocab_size:
             raise ValueError(f"Expected vocab_size={self.vocab_size}, got {v}")
@@ -64,6 +88,11 @@ class Transformer(nn.Module):
         return logits, x
 
     def forward_from_state(self, x, state):
+        """
+        Transformer appends the new step(s) to the full sequence seen so far and reruns
+        the whole causal forward pass, returning the updated sequence as the
+        new "state" for the next call
+        """
         if state is None:
             new_state = x
         else:
@@ -72,6 +101,10 @@ class Transformer(nn.Module):
         return logits, new_state
 
     def export(self, folder, run_id, loss):
+        """
+        Saves model weights to disk, then frees the model and clears the
+        CUDA cache
+        """
         torch.save(self.state_dict(), str(folder / f'r{run_id}_transformer_{loss}.pt'))
         del self
         torch.cuda.empty_cache()
