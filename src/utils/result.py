@@ -2,13 +2,13 @@ from common.sampling_evaluation import evaluate_similarity, evaluate_satisfiabil
 
 
 class Result:
-    def __init__(self, architecture, dataset, noise, alpha, run_id, model, train_acc, test_acc, nr_epochs, training_time):
+    def __init__(self, architecture, dataset, noise, alpha, run_id, loss, train_acc, test_acc, nr_epochs, training_time):
         self.architecture = architecture
         self.dataset = dataset
         self.noise = noise
         self.alpha = alpha
         self.run_id = run_id
-        self.model = model
+        self.loss = loss
         self.train_accuracy = train_acc
         self.test_accuracy = test_acc
         self.nr_epochs = nr_epochs
@@ -44,7 +44,7 @@ class Result:
             'noise': self.noise,
             'alpha': self.alpha,
             'run_id': self.run_id,
-            'model': self.model,
+            'loss': self.loss,
             'prefix_length': prefix,
             'sampling_strategy': strategy,
             'train_accuracy': self.train_accuracy,

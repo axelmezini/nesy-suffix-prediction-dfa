@@ -8,10 +8,10 @@ import torch
 DEFAULTS = {
     'root_path': './',
     'datasets': ['BPIC_2013_closed', 'BPIC_2020_travel', 'sepsis'],
-    'noise_levels': ['01', '02', '03', '04'],
+    'noise_levels': [10, 20, 30, 40],
     'alpha_levels': [0.05, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 0.95],
-    'architecture': 'LSTM',
-    'models': ['baseline', 'GLL', 'LLL'],
+    'architectures': ['LSTM', 'transformer'],
+    'losses': ['baseline', 'GLL', 'LLL'],
     'nr_runs': 15 ,
     'hidden_dim': 100 ,
     'temperature': 0.7,

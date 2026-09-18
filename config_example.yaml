@@ -1,16 +1,15 @@
 root_path: 'path_to_root' # Folder must contain data/
-
 datasets: [BPIC_2013_closed, BPIC_2020_travel, sepsis] # BPIC_2013_closed | BPIC_2020_travel | sepsis
 
-noise_levels: ['01', '02', '03', '04'] # '01' | '02' | '03' | '04'
+architectures: [LSTM, transformer] # LSTM | transformer
+losses: [baseline, GLL, LLL] # baseline | GLL | LLL
+
+noise_levels: [10, 20, 30, 40] # 10 | 20 | 30 | 40
 alpha_levels: [0.05, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 0.95] # 0 <= alpha <= 1
-architecture: LSTM # LSTM | transformer
-models: [baseline, GLL, LLL] # baseline | GLL | LLL
-
+temperature: 0.7 # sampling temperature at test time
 nr_runs: 15 # Number of runs for each configuration
-hidden_dim: 100 # Number of hidden dimensions of architecture
-temperature: 0.7
 
+hidden_dim: 100 # Number of hidden dimensions of architecture
 batch_size: 64
 nr_epochs: 2000 # Total number of epochs
 min_epochs: 500 # Minimum number of epochs before early stopping

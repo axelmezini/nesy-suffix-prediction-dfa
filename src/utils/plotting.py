@@ -8,7 +8,7 @@ def get_color_palette(model_list):
     return {model: custom_colors[i] for i, model in enumerate(model_list)}
 
 def plot_metric_bars(dataframe, split, metric, folder_path):
-    model_list = dataframe['model'].unique()
+    model_list = dataframe['loss'].unique()
     palette = get_color_palette(model_list)
 
     fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
@@ -18,7 +18,7 @@ def plot_metric_bars(dataframe, split, metric, folder_path):
             data=dataframe[dataframe['sampling_strategy'] == strat],
             x='prefix_length',
             y=f'{split}_{metric}',
-            hue='model',
+            hue='loss',
             ax=ax,
             edgecolor='black',
             palette=palette,

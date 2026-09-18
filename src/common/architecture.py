@@ -18,8 +18,8 @@ class LSTM(nn.Module):
         logits = self.output_layer(output)
         return logits, (hn, cn)
 
-    def export(self, folder, run_id, model):
-        torch.save(self.state_dict(), str(folder / f'r{run_id}_lstm_{model}.pt'))
+    def export(self, folder, run_id, loss):
+        torch.save(self.state_dict(), str(folder / f'r{run_id}_lstm_{loss}.pt'))
         del self
         torch.cuda.empty_cache()
 
@@ -71,7 +71,7 @@ class Transformer(nn.Module):
         logits, _ = self.forward(new_state)
         return logits, new_state
 
-    def export(self, folder, run_id, model):
-        torch.save(self.state_dict(), str(folder / f'r{run_id}_transformer_{model}.pt'))
+    def export(self, folder, run_id, loss):
+        torch.save(self.state_dict(), str(folder / f'r{run_id}_transformer_{loss}.pt'))
         del self
         torch.cuda.empty_cache()
