@@ -84,7 +84,7 @@ class SymbolicDFA:
         return self.graph.nodes - reachable
 
     def to_deep_dfa(self, device):
-        deep_dfa = DeepDFA(len(self.graph.nodes), len(self.labels) + 1, device)
+        deep_dfa = DeepDFA(len(self.graph.nodes), len(self.labels) + 1).to(device)
         deep_dfa.build(self.state_types, self.graph.edges, self.labels)
         return deep_dfa
 
@@ -118,22 +118,23 @@ def valid_tokens_for_guard(guard_expr, tokens):
 
 
 class DeepDFA(nn.Module):
-    def __init__(self, n_states, n_actions, device):
+    def __init__(self, n_states, n_actions):
         super(DeepDFA, self).__init__()
         self.n_states = n_states
         self.n_actions = n_actions
-        self.device = device
-        self.trans_prob = torch.zeros((n_actions, n_states, n_states), requires_grad=False, device=device)
-        self.accepting_matrix = torch.zeros((n_states, 2), requires_grad=False, device=device)
-        self.rejecting_matrix = torch.zeros((n_states, 2), requires_grad=False, device=device)
+        self.register_buffer('trans_prob', torch.zeros(n_actions, n_states, n_states))
+        self.register_buffer('accepting_matrix', torch.zeros(n_states, 2))
+        self.register_buffer('rejecting_matrix', torch.zeros(n_states, 2))
+
+    @property
+    def device(self):
+        return self.trans_prob.device
 
     def build(self, state_types, edges, labels):
         labels_map = {label: i for i, label in enumerate(labels + ['end'])}
-
         with torch.no_grad():
             for (src, dst, label) in edges:
                 self.trans_prob[labels_map[label], src, dst] = 1.0
-
             for s in state_types:
                 self.accepting_matrix[s, int(state_types[s] == 1)] = 1.0
                 self.rejecting_matrix[s, int(state_types[s] == -1)] = 1.0

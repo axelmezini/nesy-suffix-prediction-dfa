@@ -1,4 +1,4 @@
-import os
+from pathlib import Path
 import time
 import random
 import numpy as np
@@ -17,7 +17,7 @@ class Experiment:
     def __init__(self, config, dataset_name, prefixes, noise, alpha):
         self.config = config
         self.ds_name = dataset_name
-        self.noise = int(noise) * 10
+        self.noise = noise
         self.alpha = alpha
         self.prefixes = prefixes
         self.results_df = None
@@ -26,73 +26,84 @@ class Experiment:
     def run(self, train_ds, test_ds, tensor_dfa, vocabulary):
         results = []
 
-        for run_id in range(0, self.config.nr_runs):
-            run_nr = run_id + 1
-            run_folder = self.create_run_folder(run_nr)
+        for architecture in self.config.architectures:
+            for run_id in range(0, self.config.nr_runs):
+                run_nr = run_id + 1
+                run_folder = self.create_run_folder(run_nr)
 
-            for model in self.config.models:
-                g = self.set_seed(run_nr)
-                model_results = self.run_model(train_ds, test_ds, tensor_dfa, vocabulary, run_folder, run_nr, model, g)
-                results.extend(model_results)
+                for loss in self.config.losses:
+                    g = self.set_seed(run_nr)
+                    model_results = self.run_model(train_ds, test_ds, tensor_dfa, vocabulary, run_folder, run_nr, loss, architecture, g)
 
-            self.results_df = pd.DataFrame(results)
-            self.results_df = self.results_df.round(10)
-            output_path = os.path.join(self.experiment_folder, 'results.csv')
-            self.results_df.to_csv(output_path, index=False)
+                    if model_results is None:
+                        continue
+                    results.extend(model_results)
 
-            self.plot_results()
+                self.results_df = pd.DataFrame(results)
+                self.results_df = self.results_df.round(10)
+                output_path = str(self.experiment_folder / 'results.csv')
+                self.results_df.to_csv(output_path, index=False)
+                self.plot_results()
 
-    def run_model(self, train_ds, test_ds, tensor_dfa, vocabulary, run_folder, run_id, model, g):
-        architecture = self.define_architecture(self.config.architecture, vocabulary, train_ds)
-        loss_fn = self.define_loss(model, architecture, tensor_dfa)
+    def run_model(self, train_ds, test_ds, tensor_dfa, vocabulary, run_folder, run_id, loss, architecture, g):
+        nn = self.define_architecture(architecture, vocabulary, train_ds)
+        loss_fn = self.define_loss(loss, nn, tensor_dfa)
+
+        if nn is None or loss_fn is None:
+            return None
 
         start_time = time.perf_counter()
-        train_acc, test_acc, nr_epochs = train(architecture, train_ds, test_ds, self.config, model, loss_fn, self.alpha)
+        train_acc, test_acc, nr_epochs = train(nn, train_ds, test_ds, self.config, loss, loss_fn)
         training_time = time.perf_counter() - start_time
 
         model_results = Result(
-            self.config.architecture, self.ds_name, self.noise, self.alpha, run_id, model, train_acc, test_acc, nr_epochs, training_time
+            architecture, self.ds_name, self.noise, self.alpha, run_id, loss, train_acc, test_acc, nr_epochs, training_time
         )
 
-        self.test(architecture, train_ds, test_ds, model_results, g)
-        architecture.export(self.experiment_folder, run_id, model)
+        self.test(nn, train_ds, test_ds, model_results, g)
+        nn.export(run_folder, run_id, loss)
         return model_results.evaluate_predictions(train_ds, test_ds, tensor_dfa)
 
-    def test(self, architecture, train_ds, test_ds, model_results, g):
+    def test(self, nn, train_ds, test_ds, model_results, g):
         for prefix in self.prefixes:
             predictions = {
-                'train_temperature': sample(architecture, train_ds, prefix, self.config.device, self.config.temperature, g=g),
-                'test_temperature': sample(architecture, test_ds, prefix, self.config.device, self.config.temperature, g=g),
-                'train_greedy': sample(architecture, train_ds, prefix, self.config.device),
-                'test_greedy': sample(architecture, test_ds, prefix, self.config.device)
+                'train_temperature': sample(nn, train_ds, prefix, self.config.device, self.config.temperature, g=g),
+                'test_temperature': sample(nn, test_ds, prefix, self.config.device, self.config.temperature, g=g),
+                'train_greedy': sample(nn, train_ds, prefix, self.config.device),
+                'test_greedy': sample(nn, test_ds, prefix, self.config.device)
             }
             model_results.add_predictions(prefix, predictions)
 
-    def define_architecture(self, architecture_name, vocabulary, train_ds):
-        if architecture_name == 'LSTM':
+    def define_architecture(self, architecture, vocabulary, train_ds):
+        if architecture == 'LSTM':
             return LSTM(len(vocabulary), self.config.hidden_dim).to(self.config.device)
-        else:
+        elif architecture == 'transformer':
             return Transformer(len(vocabulary), 128, 8, 2, 256, int(int(train_ds.size(1)) * 2 + 32)).to(self.config.device)
-
-    def define_loss(self, model_name, architecture, tensor_dfa):
-        if model_name == 'baseline':
-            return torch.nn.CrossEntropyLoss()
-        elif model_name == 'LLL':
-            return LocalLogicLoss(tensor_dfa, self.alpha, self.config.device)
         else:
-            return GlobalLogicLoss(architecture, tensor_dfa, self.alpha, self.config.device, self.prefixes)
+            print(f'Architecture "{architecture}" is not supported. See config or defaults.')
+            return None
+
+    def define_loss(self, loss, architecture, tensor_dfa):
+        if loss == 'baseline':
+            return torch.nn.CrossEntropyLoss()
+        elif loss == 'GLL':
+            return GlobalLogicLoss(architecture, tensor_dfa, self.alpha, self.prefixes)
+        elif loss == 'LLL':
+            return LocalLogicLoss(tensor_dfa, self.alpha)
+        else:
+            print(f'Loss "{loss}" is not supported. See config or defaults.')
+            return None
 
     def create_experiment_folder(self):
         alpha_string = str(int(round(self.alpha * 100)))
         folder_name = f'{self.config.timestamp}_noise{self.noise}_alpha{alpha_string}'
-        experiment_folder = str(os.path.join(self.config.root_path, 'results', self.ds_name, folder_name))
-        os.makedirs(experiment_folder)
+        experiment_folder = Path(self.config.root_path) / 'results' / self.ds_name / folder_name
+        experiment_folder.mkdir(parents=True, exist_ok=True)
         return experiment_folder
 
     def create_run_folder(self, run_number):
-        run_folder = os.path.join(self.experiment_folder, f'run{run_number}')
-        for subfolder in []: # ['plots', 'predicted_traces', 'models']:
-            os.makedirs(os.path.join(run_folder, subfolder))
+        run_folder = self.experiment_folder / f'run{run_number}'
+        run_folder.mkdir(parents=True, exist_ok=True)
         return run_folder
 
     def set_seed(self, seed):

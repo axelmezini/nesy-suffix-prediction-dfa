@@ -1,4 +1,4 @@
-architecture,dataset,noise,alpha,run_id,model,prefix_length,sampling_strategy,train_accuracy,test_accuracy,train_distance,test_distance,train_similarity_scaled,test_similarity_scaled,train_satisfiability,test_satisfiability,nr_epochs,training_time
+architecture,dataset,noise,alpha,run_id,loss,prefix_length,sampling_strategy,train_accuracy,test_accuracy,train_distance,test_distance,train_similarity_scaled,test_similarity_scaled,train_satisfiability,test_satisfiability,nr_epochs,training_time
 LSTM,BPIC_2013_closed,10,0.05,1,baseline,1,temperature,0.9750701547,0.9724633545,1.5915254237,1.3464912281,0.7427019116,0.7877834513,0.8864406943,0.8728070259,908,30.8831116012
 LSTM,BPIC_2013_closed,10,0.05,1,baseline,1,greedy,0.9750701547,0.9724633545,1.3474576271,0.8464912281,0.7842714814,0.8740461774,0.9728813171,1.0,908,30.8831116012
 LSTM,BPIC_2013_closed,10,0.05,1,baseline,2,temperature,0.9750701547,0.9724633545,0.9711864407,0.600877193,0.8777296426,0.9298569838,0.8254237175,0.938596487,908,30.8831116012

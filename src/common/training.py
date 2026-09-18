@@ -23,9 +23,8 @@ class EarlyStopping:
         return self.counter >= self.patience or new_loss < self.min_loss
 
 
-def train(architecture, train_dataset, test_dataset, config, model, loss_fn, alpha=None):
+def train(architecture, train_dataset, test_dataset, config, loss, loss_fn):
     device = config.device
-    print(type(loss_fn))
     optim = torch.optim.Adam(params=architecture.parameters(), lr=config.lr)
     acc_func = torchmetrics.Accuracy(task='multiclass', num_classes=train_dataset.size(-1), top_k=1).to(device)
     early_stopper = EarlyStopping(config.patience, config.min_delta, config.min_loss)
@@ -34,8 +33,9 @@ def train(architecture, train_dataset, test_dataset, config, model, loss_fn, alp
     Y_data = train_dataset[:, 1:, :]
     train_loader = DataLoader(TensorDataset(X_data, Y_data), batch_size=config.batch_size, shuffle=False)
 
+    print(type(loss_fn))
     for epoch in range(config.nr_epochs):
-        train_loss, train_acc = train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, model, alpha)
+        train_loss, train_acc = train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, loss)
         test_loss, test_acc = test(architecture, test_dataset, acc_func, device, config.batch_size)
 
         if epoch % 100 == 0:
@@ -47,7 +47,7 @@ def train(architecture, train_dataset, test_dataset, config, model, loss_fn, alp
     return train_acc, test_acc, epoch
 
 
-def train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, model, alpha):
+def train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, loss):
     batch_accuracies, batch_losses = [], []
 
     for X, Y in train_loader:
@@ -58,17 +58,10 @@ def train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, mo
         optim.zero_grad()
 
         predictions, _ = architecture(X)
-        if model == 'LLL':
-            total_loss = loss_fn(predictions, targets, X)
-        elif model == 'GLL':
-            batch_size, seq_len, vocab_size = predictions.shape
-            loss_func = torch.nn.CrossEntropyLoss()
-            sup_loss = loss_func(predictions.view(-1, vocab_size), targets.view(-1))
-            log_loss = loss_fn(X)
-
-            total_loss = alpha * sup_loss + (1 - alpha) * log_loss
+        if loss == 'baseline':
+            total_loss = F.cross_entropy(predictions.reshape(-1, vocab_size), targets.reshape(-1))
         else:
-            total_loss = F.cross_entropy(predictions.view(-1, vocab_size), targets.view(-1))
+            total_loss = loss_fn(predictions, targets, X)
 
         total_loss.backward()
         optim.step()
@@ -81,8 +74,7 @@ def train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, mo
 
 
 def test(architecture, test_dataset, acc_func, device, batch_size):
-    accuracies = []
-    losses = []
+    accuracies,  losses = [], []
 
     X_data = test_dataset[:, :-1, :]
     Y_data = test_dataset[:, 1:, :]
@@ -90,12 +82,11 @@ def test(architecture, test_dataset, acc_func, device, batch_size):
 
     with torch.no_grad():
         for X, Y in test_loader:
-            X = X.to(device)
-            Y = Y.to(device)
+            X, Y = X.to(device), Y.to(device)
 
-            target = torch.argmax(Y.reshape(-1, Y.size(-1)), dim=-1)
             predictions, _ = architecture(X)
             predictions = predictions.reshape(-1, predictions.size(-1))
+            target = torch.argmax(Y.reshape(-1, Y.size(-1)), dim=-1)
 
             loss = F.cross_entropy(predictions, target)
             losses.append(loss.item())
