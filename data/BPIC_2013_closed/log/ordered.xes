@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<log xes.version="1849-2016" xes.features="nested-attributes" xmlns="http://www.xes-standard.org/">
+<log xes.version="1849-2016" xes.features="nested-attributes">
 	<trace>
 		<string key="concept:name" value="1-109135791" />
 		<event>
