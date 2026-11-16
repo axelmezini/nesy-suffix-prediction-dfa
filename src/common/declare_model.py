@@ -17,7 +17,7 @@ class Model:
         """
         Parses each non-comment line of the .decl file (format:
         "Template[activator]" or "Template[activator, target]"), converts
-        each matched constraint to LTL, and joins them all with logical AND
+        each matched constraint to LTLf, and joins them all with logical AND
         """
         formulas = []
         for row in self.content.split('\n'):
