@@ -10,7 +10,7 @@ class Model:
         self.folder_path = folder_path
         self.name = filename
         self.content = self.read_from_file()
-        self.formulas = self.to_ltl()
+        self.formulas = None
         self.dfa = None
 
     def to_ltl(self):
