@@ -36,7 +36,7 @@ nesy-suffix-prediction-dfa/
 ├── results/               # Results
 ├── README.md
 ├── .gitignore
-└── LICENCE
+└── LICENSE
 ```
 
 ---
