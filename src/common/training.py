@@ -28,7 +28,7 @@ class EarlyStopping:
         return self.counter >= self.patience or new_loss < self.min_loss
 
 
-def train(architecture, train_dataset, test_dataset, config, loss, loss_fn):
+def train(neural_network, train_dataset, test_dataset, config, loss, loss_fn):
     """
     Trains the given model for up to config.nr_epochs, evaluating on the
     test set each epoch; training only becomes eligible for early stopping
@@ -36,7 +36,7 @@ def train(architecture, train_dataset, test_dataset, config, loss, loss_fn):
     step. Returns the final epoch's train/test accuracy and the epoch it stopped at.
     """
     device = config.device
-    optim = torch.optim.Adam(params=architecture.parameters(), lr=config.lr)
+    optim = torch.optim.Adam(params=neural_network.parameters(), lr=config.lr)
     acc_func = torchmetrics.Accuracy(task='multiclass', num_classes=train_dataset.size(-1), top_k=1).to(device)
     early_stopper = EarlyStopping(config.patience, config.min_delta, config.min_loss)
 
@@ -46,8 +46,8 @@ def train(architecture, train_dataset, test_dataset, config, loss, loss_fn):
 
     print(type(loss_fn))
     for epoch in range(config.nr_epochs):
-        train_loss, train_acc = train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, loss)
-        test_loss, test_acc = test(architecture, test_dataset, acc_func, device, config.batch_size)
+        train_loss, train_acc = train_epoch(neural_network, train_loader, acc_func, loss_fn, optim, device, loss)
+        test_loss, test_acc = test(neural_network, test_dataset, acc_func, device, config.batch_size)
 
         if epoch % 100 == 0:
             print(f"Epoch {epoch}:\ttotal loss: {train_loss:.8f}")
@@ -58,7 +58,7 @@ def train(architecture, train_dataset, test_dataset, config, loss, loss_fn):
     return train_acc, test_acc, epoch
 
 
-def train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, loss):
+def train_epoch(neural_network, train_loader, acc_func, loss_fn, optim, device, loss):
     """
     Runs one training epoch over all batches: for the baseline loss uses
     plain cross-entropy, otherwise defers to the custom loss_fn; returns
@@ -73,7 +73,7 @@ def train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, lo
         targets = torch.argmax(Y, dim=-1)
         optim.zero_grad()
 
-        predictions, _ = architecture(X)
+        predictions, _ = neural_network(X)
         if loss == 'baseline':
             total_loss = F.cross_entropy(predictions.reshape(-1, vocab_size), targets.reshape(-1))
         else:
@@ -89,7 +89,7 @@ def train_epoch(architecture, train_loader, acc_func, loss_fn, optim, device, lo
     return mean(batch_losses), mean(batch_accuracies)
 
 
-def test(architecture, test_dataset, acc_func, device, batch_size):
+def test(neural_network, test_dataset, acc_func, device, batch_size):
     """
     Evaluates the model on the test set using plain
     cross-entropy loss on next-event prediction; returns mean loss and
@@ -105,7 +105,7 @@ def test(architecture, test_dataset, acc_func, device, batch_size):
         for X, Y in test_loader:
             X, Y = X.to(device), Y.to(device)
 
-            predictions, _ = architecture(X)
+            predictions, _ = neural_network(X)
             predictions = predictions.reshape(-1, predictions.size(-1))
             target = torch.argmax(Y.reshape(-1, Y.size(-1)), dim=-1)
 
