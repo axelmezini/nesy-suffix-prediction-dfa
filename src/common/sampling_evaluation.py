@@ -18,7 +18,7 @@ def sample_token(logits, temperature=0, g=None):
         return torch.multinomial(probs, num_samples=1, generator=g)
 
 
-def sample(model, dataset, prefix_len, device, temperature=0, g=None):
+def sample(neural_network, dataset, prefix_len, device, temperature=0, g=None):
     """
     Autoregressively generates full traces from a given prefix length: feeds
     the prefix once to get an initial state, then repeatedly samples the
@@ -35,7 +35,7 @@ def sample(model, dataset, prefix_len, device, temperature=0, g=None):
     stop_event[stop_event_idx] = 1.0
     stop_mask = torch.zeros(prefix.size(0), dtype=torch.bool).to(device)
 
-    logits, rnn_state = model(prefix)
+    logits, rnn_state = neural_network(prefix)
     for step in range(prefix_len, dataset.size(1)):
         logits_step = logits[:, -1, :]
         sample_idx = sample_token(logits_step, temperature, g)
@@ -47,7 +47,7 @@ def sample(model, dataset, prefix_len, device, temperature=0, g=None):
         if torch.all(stop_mask):
             break
 
-        logits, rnn_state = model.forward_from_state(one_hot, rnn_state)
+        logits, rnn_state = neural_network.forward_from_state(one_hot, rnn_state)
 
     # If the loop ended by reaching max length rather than every trace
     # stopping naturally, pad all traces with one final stop event so
