@@ -59,35 +59,35 @@ class Experiment:
         Builds one model/loss combo, trains it, times the training, evaluates
         it on the test prefixes, exports the trained model, and returns the evaluated results
         """
-        nn = self.define_architecture(architecture, vocabulary, train_ds)
-        loss_fn = self.define_loss(loss, nn, tensor_dfa)
+        neural_network = self.define_architecture(architecture, vocabulary, train_ds)
+        loss_fn = self.define_loss(loss, neural_network, tensor_dfa)
 
-        if nn is None or loss_fn is None:
+        if neural_network is None or loss_fn is None:
             return None
 
         start_time = time.perf_counter()
-        train_acc, test_acc, nr_epochs = train(nn, train_ds, test_ds, self.config, loss, loss_fn)
+        train_acc, test_acc, nr_epochs = train(neural_network, train_ds, test_ds, self.config, loss, loss_fn)
         training_time = time.perf_counter() - start_time
 
         model_results = Result(
             architecture, self.ds_name, self.noise, self.alpha, run_id, loss, train_acc, test_acc, nr_epochs, training_time
         )
 
-        self.test(nn, train_ds, test_ds, model_results, g)
-        nn.export(run_folder, run_id, loss)
+        self.test(neural_network, train_ds, test_ds, model_results, g)
+        neural_network.export(run_folder, run_id, loss)
         return model_results.evaluate_predictions(train_ds, test_ds, tensor_dfa)
 
-    def test(self, nn, train_ds, test_ds, model_results, g):
+    def test(self, neural_network, train_ds, test_ds, model_results, g):
         """
         For each prefix length, samples predictions on both train/test sets
         using both temperature and greedy decoding, and records them
         """
         for prefix in self.prefixes:
             predictions = {
-                'train_temperature': sample(nn, train_ds, prefix, self.config.device, self.config.temperature, g=g),
-                'test_temperature': sample(nn, test_ds, prefix, self.config.device, self.config.temperature, g=g),
-                'train_greedy': sample(nn, train_ds, prefix, self.config.device),
-                'test_greedy': sample(nn, test_ds, prefix, self.config.device)
+                'train_temperature': sample(neural_network, train_ds, prefix, self.config.device, self.config.temperature, g=g),
+                'test_temperature': sample(neural_network, test_ds, prefix, self.config.device, self.config.temperature, g=g),
+                'train_greedy': sample(neural_network, train_ds, prefix, self.config.device),
+                'test_greedy': sample(neural_network, test_ds, prefix, self.config.device)
             }
             model_results.add_predictions(prefix, predictions)
 
@@ -104,7 +104,7 @@ class Experiment:
             print(f'Architecture "{architecture}" is not supported. See config or defaults.')
             return None
 
-    def define_loss(self, loss, architecture, tensor_dfa):
+    def define_loss(self, loss, neural_network, tensor_dfa):
         """
         Instantiates the requested loss function; returns None (with a
         warning) if the name isn't recognized
@@ -112,7 +112,7 @@ class Experiment:
         if loss == 'baseline':
             return torch.nn.CrossEntropyLoss()
         elif loss == 'GLL':
-            return GlobalLogicLoss(architecture, tensor_dfa, self.alpha, self.prefixes)
+            return GlobalLogicLoss(neural_network, tensor_dfa, self.alpha, self.prefixes)
         elif loss == 'LLL':
             return LocalLogicLoss(tensor_dfa, self.alpha)
         else:
